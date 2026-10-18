@@ -114,6 +114,7 @@ Totals on 18 October 2026: HTND pull requests 8 released, 18 merged, 8 in review
 | The longest part of that clean-up, checking the new UTXO set against its commitment, runs without stopping block processing; on a private test network the longest pause per move fell from 8.4–9.5 s to 0.6–1.7 s | 🔀 Merged | 2.18.3 | [HTND#77](https://github.com/HoosatNetwork/HTND/pull/77) ([HTND#41](https://github.com/HoosatNetwork/HTND/issues/41)) |
 | Writing the new UTXO set still pauses block processing; proposal to move that out as well, after the change above | 🔄 In review | — | [HTND#42](https://github.com/HoosatNetwork/HTND/issues/42) |
 | Proposal: measure how long each part of the node holds and waits for its main lock, with a warning when a hold is long | 🔄 In review | — | [HTND#68](https://github.com/HoosatNetwork/HTND/issues/68) |
+| Proposal: the new RPC allow list keeps an operator's own RPC listener, and wildcard listeners keep accepting both IPv4 and IPv6 as before | 🔄 In review | — | [HTND#80](https://github.com/HoosatNetwork/HTND/issues/80) |
 | A block whose parents arrive while it is being checked is processed instead of triggering a small re-sync | 🔀 Merged | 2.18.3 | [HTND#61](https://github.com/HoosatNetwork/HTND/pull/61) |
 | The GetBlocks call no longer lists one block twice in its answer | 🔀 Merged | 2.18.3 | [HTND#62](https://github.com/HoosatNetwork/HTND/pull/62) |
 | A peer's reject message is kept at no more than 2 KiB in the node's error and log | 🔄 In review | — | [HTND#64](https://github.com/HoosatNetwork/HTND/pull/64) |
