@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you refer to this tracker, please cite it as below and give the date you read it; the pages change as fixes are reviewed and released."
+title: "htn-research: reliability tracker for the Hoosat node (HTND) and mining bridge"
+abstract: "A continuously updated record of what has been fixed, what is under review and how it is tested in the Hoosat full node (HTND) and the htn-stratum-bridge, with findings, measurements and links to every upstream change. Started in October 2026 as a reliability review of HTND 2.18.1 and htn-stratum-bridge v1.8.0."
+type: dataset
+authors:
+  - alias: "Evern00b-fi"
+date-released: "2026-10-12"
+license: CC-BY-4.0
+repository-code: "https://github.com/Evern00b-fi/htn-research"
+keywords: [hoosat, htnd, ghostdag, reliability, mining, node-operations]

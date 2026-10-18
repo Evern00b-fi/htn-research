@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="400" viewBox="0 0 700 400" role="img" aria-labelledby="t d">
+<title id="t">Hoohash v1.1.0 PoW validity of 183 real mainnet blocks by build</title>
+<desc id="d">Grouped bar chart. Valid and invalid PoW verdicts for 183 consecutive real mainnet blocks: darwin/arm64 unpatched build 82 valid, 101 invalid; amd64 v1 build 183 valid, 0 invalid; darwin/arm64 patched build 183 valid, 0 invalid. Tested sample of 183 real mainnet blocks.</desc>
+<rect width="700" height="400" fill="#ffffff"/>
+<text x="350.0" y="28" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" font-weight="bold" fill="#000000">PoW verdict on 183 real mainnet blocks, by build (HTN-01)</text>
+<line x1="70.0" y1="50.0" x2="70.0" y2="300.0" stroke="#000000" stroke-width="1"/>
+<line x1="70.0" y1="300.0" x2="670.0" y2="300.0" stroke="#000000" stroke-width="1"/>
+<line x1="70.0" y1="300.0" x2="670.0" y2="300.0" stroke="#dddddd" stroke-width="1"/>
+<text x="62" y="304.0" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="end" font-weight="normal" fill="#000000">0</text>
+<line x1="70.0" y1="237.5" x2="670.0" y2="237.5" stroke="#dddddd" stroke-width="1"/>
+<text x="62" y="241.5" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="end" font-weight="normal" fill="#000000">50</text>
+<line x1="70.0" y1="175.0" x2="670.0" y2="175.0" stroke="#dddddd" stroke-width="1"/>
+<text x="62" y="179.0" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="end" font-weight="normal" fill="#000000">100</text>
+<line x1="70.0" y1="112.5" x2="670.0" y2="112.5" stroke="#dddddd" stroke-width="1"/>
+<text x="62" y="116.5" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="end" font-weight="normal" fill="#000000">150</text>
+<line x1="70.0" y1="50.0" x2="670.0" y2="50.0" stroke="#dddddd" stroke-width="1"/>
+<text x="62" y="54.0" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="end" font-weight="normal" fill="#000000">200</text>
+<text x="18" y="175.0" font-family="Helvetica, Arial, sans-serif" font-size="13" text-anchor="middle" font-weight="normal" fill="#000000" transform="rotate(-90 18 175.0)">blocks</text>
+<rect x="110.0" y="197.5" width="56.0" height="102.5" fill="#009E73" stroke="none"/>
+<text x="138.0" y="191.5" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="middle" font-weight="bold" fill="#000000">82</text>
+<text x="138.0" y="316" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="normal" fill="#444444">valid</text>
+<rect x="174.0" y="173.8" width="56.0" height="126.2" fill="#D55E00" stroke="none"/>
+<text x="202.0" y="167.75" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="middle" font-weight="bold" fill="#000000">101</text>
+<text x="202.0" y="316" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="normal" fill="#444444">invalid</text>
+<text x="170.0" y="334" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="middle" font-weight="normal" fill="#000000">darwin/arm64, unpatched</text>
+<rect x="310.0" y="71.2" width="56.0" height="228.8" fill="#009E73" stroke="none"/>
+<text x="338.0" y="65.25" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="middle" font-weight="bold" fill="#000000">183</text>
+<text x="338.0" y="316" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="normal" fill="#444444">valid</text>
+<text x="402.0" y="294.0" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="middle" font-weight="bold" fill="#000000">0</text>
+<text x="402.0" y="316" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="normal" fill="#444444">invalid</text>
+<text x="370.0" y="334" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="middle" font-weight="normal" fill="#000000">amd64 v1</text>
+<rect x="510.0" y="71.2" width="56.0" height="228.8" fill="#009E73" stroke="none"/>
+<text x="538.0" y="65.25" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="middle" font-weight="bold" fill="#000000">183</text>
+<text x="538.0" y="316" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="normal" fill="#444444">valid</text>
+<text x="602.0" y="294.0" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="middle" font-weight="bold" fill="#000000">0</text>
+<text x="602.0" y="316" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="normal" fill="#444444">invalid</text>
+<text x="570.0" y="334" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="middle" font-weight="normal" fill="#000000">darwin/arm64, patched</text>
+<rect x="80.0" y="56.0" width="12.0" height="12.0" fill="#009E73" stroke="none"/>
+<text x="98" y="66" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="start" font-weight="normal" fill="#000000">PoW valid</text>
+<rect x="180.0" y="56.0" width="12.0" height="12.0" fill="#D55E00" stroke="none"/>
+<text x="198" y="66" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="start" font-weight="normal" fill="#000000">PoW invalid</text>
+<text x="350.0" y="356" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="normal" fill="#333333">Tested sample of 183 real mainnet blocks (header v10, all network-accepted). The unpatched arm64 build</text>
+<text x="350.0" y="371" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="normal" fill="#333333">rejects 101/183 because the compiler fuses multiply-add; the patch adds explicit float64() conversions.</text>
+<text x="350.0" y="386" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="normal" fill="#333333">Sampled agreement on amd64 is not a proof; the golden-vector test is the gate. Source: findings/HTN-01.md.</text>
+</svg>

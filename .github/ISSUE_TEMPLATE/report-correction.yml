@@ -1,0 +1,23 @@
+name: Report correction
+description: Something on these pages is wrong, out of date or unclear.
+labels: [correction]
+body:
+  - type: input
+    id: location
+    attributes:
+      label: File and line or section
+      placeholder: findings/HTN-05.md, "Evidence" section
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is wrong
+      description: Quote the text and say what the correct statement is.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Code reference (repository, commit, file:line), log excerpt or measurement. Leave out IP addresses and other personal data.

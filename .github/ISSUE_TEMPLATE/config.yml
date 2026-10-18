@@ -1,0 +1,14 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Bug or change request for the node (HTND)
+    url: https://github.com/HoosatNetwork/HTND/issues
+    about: Code issues and pull requests belong in the HTND repository.
+  - name: Bug or change request for the stratum bridge
+    url: https://github.com/HoosatNetwork/htn-stratum-bridge/issues
+    about: Bridge issues and pull requests belong in the bridge repository.
+  - name: Development discussion (Hoosat Discord, Development category)
+    url: https://discord.gg/EE5ZcTeuj
+    about: Discussion belongs on the Hoosat Discord server.
+  - name: Security vulnerability in HTND (private report)
+    url: https://github.com/HoosatNetwork/HTND/security/advisories/new
+    about: Never report vulnerabilities in a public issue.
