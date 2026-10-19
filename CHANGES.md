@@ -188,6 +188,7 @@ Totals on 19 October 2026: HTND pull requests 8 released, 18 merged, 8 in review
 | The script builder writes a single zero byte as data instead of as an empty value | 🔄 In review | — | [HTND#63](https://github.com/HoosatNetwork/HTND/pull/63) |
 | The script builder no longer crashes when asked for a zero lock time or sequence number | 🔀 Merged | 2.18.3 | [HTND#67](https://github.com/HoosatNetwork/HTND/pull/67) |
 | The wallet daemon stops with an error when it cannot get the node's DAG information at start, instead of exiting silently | 🔀 Merged | 2.18.3 | [HTND#66](https://github.com/HoosatNetwork/HTND/pull/66) |
+| A pruning test added with the pruning check change no longer fails on single-CPU or busy machines (test only) | 🔄 In review | — | [HTND#81](https://github.com/HoosatNetwork/HTND/pull/81) |
 | Opt-in shutdown stress harness (see area 1) | 🔄 In review | — | [HTND#55](https://github.com/HoosatNetwork/HTND/pull/55) |
 | Run more of the unit tests on every push, on every release architecture | 📝 Proposed | — | [HTN-19](findings/HTN-19.md), [HTN-24](findings/HTN-24.md), [HTN-25](findings/HTN-25.md), [HTN-34](findings/HTN-34.md) |
 
