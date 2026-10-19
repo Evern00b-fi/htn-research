@@ -33,7 +33,7 @@ SECTIONS = ["Summary", "Affected code", "Impact", "Evidence", "Recommendation", 
 
 # (pattern, files that must contain it, forbidden variants that must appear nowhere)
 KEY_NUMBERS = [
-    (r"101/183", ["FINDINGS.md", "README.md", "METHODOLOGY.md", "findings/HTN-01.md"],
+    (r"101/183", ["FINDINGS.md", "README.md", "reports/first-study-2026-10.md", "findings/HTN-01.md"],
      [r"\b101 of 183\b", r"\b102/183\b", r"\b100/183\b"]),
     (r"342\.9 MB", ["README.md", "findings/HTN-08.md", "reports/memory-test.md"],
      [r"\b343 MB\b(?! per node)", r"342,9", r"\b342\.9 MiB\b"]),

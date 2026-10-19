@@ -92,8 +92,8 @@ times, aggregates. More in [METHODOLOGY.md](METHODOLOGY.md).
 | [CHANGES.md](CHANGES.md) | Every change by area: status, version, link, technical details |
 | [FINDINGS.md](FINDINGS.md) | The full record: 41 findings with severity, evidence level, chain impact and upstream status |
 | [findings/](findings/) | One file per finding: affected code, evidence, recommendation, verification |
-| [METHODOLOGY.md](METHODOLOGY.md) | How the findings were produced and checked, what was refuted, limitations, how every new build is tested |
-| [reports/](reports/) | Measurements: [red blocks](reports/red-blocks.md), [memory test](reports/memory-test.md), [database recovery](reports/db-recovery.md), [IBD timing](reports/ibd-timing.md), [testnet state](reports/testnet-state.md) |
+| [METHODOLOGY.md](METHODOLOGY.md) | How findings are checked, how fixes and builds are tested and compared, publication rules, limitations |
+| [reports/](reports/) | Measurements: [red blocks](reports/red-blocks.md), [memory test](reports/memory-test.md), [database recovery](reports/db-recovery.md), [IBD timing](reports/ibd-timing.md), [testnet state](reports/testnet-state.md), [the first study](reports/first-study-2026-10.md) |
 | [figures/](figures/README.md) | Charts and how to regenerate them |
 | [CONTRIBUTING.md](CONTRIBUTING.md), [SECURITY.md](SECURITY.md) | Corrections welcome here; code changes belong upstream; how to report a vulnerability |
 

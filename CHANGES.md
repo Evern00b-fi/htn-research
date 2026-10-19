@@ -45,7 +45,7 @@ Totals on 19 October 2026: HTND pull requests 8 released, 18 merged, 8 in review
   branch after the first four fixes were merged; each carries its own regression test. #48 and #50 link to the harness.
 - Merge commits on the 2.18.2 branch: #36 `5b1c9e3b6`, #37 `c36ba8c3d`, #40 `717a3366c`, #46 `e6eb0bb82`.
 - A refuted claim worth knowing: the internal shutdown budget is not "about 210 s"; see
-  [METHODOLOGY.md](METHODOLOGY.md#4-what-was-refuted-or-corrected).
+  [the first study](reports/first-study-2026-10.md#4-what-was-refuted-or-corrected).
 
 </details>
 
