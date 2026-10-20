@@ -1,6 +1,6 @@
 # Changes by area
 
-Every change we have sent to the Hoosat developers. Status checked against GitHub on 19 October 2026.
+Every change we have sent to the Hoosat developers. Status checked against GitHub on 20 October 2026.
 
 | Mark | Meaning |
 |---|---|
@@ -10,7 +10,7 @@ Every change we have sent to the Hoosat developers. Status checked against GitHu
 | 🧪 Being tested | Fix written; being measured before it is sent |
 | 📝 Proposed | Written up here; not yet sent |
 
-Totals on 19 October 2026: HTND pull requests 8 released, 18 merged, 8 in review; HTND issues 8 in review; bridge pull requests 4 merged, 1 in review. Nothing has been closed or rejected.
+Totals on 20 October 2026: HTND pull requests 8 released, 21 merged, 6 in review; HTND issues 8 in review; bridge pull requests 4 merged, 1 in review. Nothing has been closed or rejected.
 
 ## By release
 
@@ -117,9 +117,9 @@ Totals on 19 October 2026: HTND pull requests 8 released, 18 merged, 8 in review
 | Proposal: the new RPC allow list keeps an operator's own RPC listener, and wildcard listeners keep accepting both IPv4 and IPv6 as before | 🔄 In review | — | [HTND#80](https://github.com/HoosatNetwork/HTND/issues/80) |
 | A block whose parents arrive while it is being checked is processed instead of triggering a small re-sync | 🔀 Merged | 2.18.3 | [HTND#61](https://github.com/HoosatNetwork/HTND/pull/61) |
 | The GetBlocks call no longer lists one block twice in its answer | 🔀 Merged | 2.18.3 | [HTND#62](https://github.com/HoosatNetwork/HTND/pull/62) |
-| A peer's reject message is kept at no more than 2 KiB in the node's error and log | 🔄 In review | — | [HTND#64](https://github.com/HoosatNetwork/HTND/pull/64) |
+| A peer's reject message is kept at no more than 2 KiB in the node's error and log | 🔀 Merged | 2.18.3 | [HTND#64](https://github.com/HoosatNetwork/HTND/pull/64) |
 | A new block is no longer announced back to the peer that just sent it | 🔀 Merged | 2.18.3 | [HTND#65](https://github.com/HoosatNetwork/HTND/pull/65) |
-| The `--enablebanning` switch is respected by the block-relay flow | 🔄 In review | — | [HTND#56](https://github.com/HoosatNetwork/HTND/pull/56) |
+| The `--enablebanning` switch is respected by the block-relay flow | 🔀 Merged | 2.18.2 | [HTND#56](https://github.com/HoosatNetwork/HTND/pull/56) |
 | A block with no transactions reports the zero hash as its merkle root | 🔀 Merged | 2.18.3 | [HTND#45](https://github.com/HoosatNetwork/HTND/pull/45) |
 
 <details>
@@ -188,7 +188,7 @@ Totals on 19 October 2026: HTND pull requests 8 released, 18 merged, 8 in review
 | The script builder writes a single zero byte as data instead of as an empty value | 🔄 In review | — | [HTND#63](https://github.com/HoosatNetwork/HTND/pull/63) |
 | The script builder no longer crashes when asked for a zero lock time or sequence number | 🔀 Merged | 2.18.3 | [HTND#67](https://github.com/HoosatNetwork/HTND/pull/67) |
 | The wallet daemon stops with an error when it cannot get the node's DAG information at start, instead of exiting silently | 🔀 Merged | 2.18.3 | [HTND#66](https://github.com/HoosatNetwork/HTND/pull/66) |
-| A pruning test added with the pruning check change no longer fails on single-CPU or busy machines (test only) | 🔄 In review | — | [HTND#81](https://github.com/HoosatNetwork/HTND/pull/81) |
+| A pruning test added with the pruning check change no longer fails on single-CPU or busy machines (test only) | 🔀 Merged | 2.18.3 | [HTND#81](https://github.com/HoosatNetwork/HTND/pull/81) |
 | Opt-in shutdown stress harness (see area 1) | 🔄 In review | — | [HTND#55](https://github.com/HoosatNetwork/HTND/pull/55) |
 | Run more of the unit tests on every push, on every release architecture | 📝 Proposed | — | [HTN-19](findings/HTN-19.md), [HTN-24](findings/HTN-24.md), [HTN-25](findings/HTN-25.md), [HTN-34](findings/HTN-34.md) |
 
