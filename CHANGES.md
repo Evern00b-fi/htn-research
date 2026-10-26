@@ -1,6 +1,6 @@
 # Changes by area
 
-Every change we have sent to the Hoosat developers. Status checked against GitHub on 20 October 2026.
+Every change we have sent to the Hoosat developers. Status checked against GitHub on 26 October 2026.
 
 | Mark | Meaning |
 |---|---|
@@ -10,7 +10,7 @@ Every change we have sent to the Hoosat developers. Status checked against GitHu
 | 🧪 Being tested | Fix written; being measured before it is sent |
 | 📝 Proposed | Written up here; not yet sent |
 
-Totals on 20 October 2026: HTND pull requests 8 released, 21 merged, 6 in review; HTND issues 8 in review; bridge pull requests 4 merged, 1 in review. Nothing has been closed or rejected.
+Totals on 26 October 2026: HTND pull requests 8 released, 22 merged, 5 in review; HTND issues 7 in review, 1 closed; bridge pull requests 4 merged, 1 in review.
 
 ## By release
 
@@ -58,7 +58,7 @@ Totals on 20 October 2026: HTND pull requests 8 released, 21 merged, 6 in review
 | With the optional LevelDB database, a read error part-way through a walk over stored data is reported instead of the walk looking complete | 🔀 Merged | 2.18.3 | [HTND#76](https://github.com/HoosatNetwork/HTND/pull/76) ([HTND#69](https://github.com/HoosatNetwork/HTND/issues/69)) |
 | The database's on-disk format is pinned, so a routine library update cannot leave older node versions unable to open the data | 🔄 In review | — | [HTND#73](https://github.com/HoosatNetwork/HTND/pull/73) ([HTND#70](https://github.com/HoosatNetwork/HTND/issues/70)) |
 | The database keeps fewer files open than the process is allowed, leaving room for peer connections and logs | 🔄 In review | — | [HTND#74](https://github.com/HoosatNetwork/HTND/pull/74) ([HTND#71](https://github.com/HoosatNetwork/HTND/issues/71)) |
-| The node logs its effective database settings at start and a short storage health summary while it runs | 🔄 In review | — | [HTND#75](https://github.com/HoosatNetwork/HTND/pull/75) ([HTND#72](https://github.com/HoosatNetwork/HTND/issues/72)) |
+| The node logs its effective database settings at start and a short storage health summary while it runs | 🔀 Merged | 2.18.3 | [HTND#75](https://github.com/HoosatNetwork/HTND/pull/75) ([HTND#72](https://github.com/HoosatNetwork/HTND/issues/72)) |
 | When the database is found corrupt at start, keep diagnostics instead of silently deleting everything and re-syncing | 📝 Proposed | — | [HTN-03](findings/HTN-03.md), [HTN-43](findings/HTN-43.md) |
 
 <details>
