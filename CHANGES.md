@@ -112,7 +112,7 @@ Totals on 30 October 2026: HTND pull requests 8 released, 23 merged, 5 in review
 |---|---|---|---|
 | The block that moves the pruning point is passed on to peers before the node's own long clean-up, so the pause no longer piles up from node to node | ✅ Released | v2.18.2 | [HTND#47](https://github.com/HoosatNetwork/HTND/pull/47) |
 | The longest part of that clean-up, checking the new UTXO set against its commitment, runs without stopping block processing; on a private test network the longest pause per move fell from 8.4–9.5 s to 0.6–1.7 s | 🔀 Merged | 2.18.3 | [HTND#77](https://github.com/HoosatNetwork/HTND/pull/77) ([HTND#41](https://github.com/HoosatNetwork/HTND/issues/41)) |
-| Writing the new UTXO set still pauses block processing; proposal to move that out as well, after the change above | 🔄 In review | — | [HTND#42](https://github.com/HoosatNetwork/HTND/issues/42) |
+| Writing the new UTXO set is split into small steps that resume after a crash, and old history is deleted in the background, on every network; its effect on the pause is not measured yet | 🔀 Merged | 2.18.3 | [HTND#82](https://github.com/HoosatNetwork/HTND/pull/82) ([HTND#42](https://github.com/HoosatNetwork/HTND/issues/42)) |
 | Proposal: measure how long each part of the node holds and waits for its main lock, with a warning when a hold is long | 🔄 In review | — | [HTND#68](https://github.com/HoosatNetwork/HTND/issues/68) |
 | Proposal: the new RPC allow list keeps an operator's own RPC listener, and wildcard listeners keep accepting both IPv4 and IPv6 as before | 🔄 In review | — | [HTND#80](https://github.com/HoosatNetwork/HTND/issues/80) |
 | A block whose parents arrive while it is being checked is processed instead of triggering a small re-sync | 🔀 Merged | 2.18.3 | [HTND#61](https://github.com/HoosatNetwork/HTND/pull/61) |
@@ -189,6 +189,7 @@ Totals on 30 October 2026: HTND pull requests 8 released, 23 merged, 5 in review
 | The script builder no longer crashes when asked for a zero lock time or sequence number | 🔀 Merged | 2.18.3 | [HTND#67](https://github.com/HoosatNetwork/HTND/pull/67) |
 | The wallet daemon stops with an error when it cannot get the node's DAG information at start, instead of exiting silently | 🔀 Merged | 2.18.3 | [HTND#66](https://github.com/HoosatNetwork/HTND/pull/66) |
 | A pruning test added with the pruning check change no longer fails on single-CPU or busy machines (test only) | 🔀 Merged | 2.18.3 | [HTND#81](https://github.com/HoosatNetwork/HTND/pull/81) |
+| The unit tests follow the deliberate 2.18.3 changes again, with every safety guard kept, and the two lint findings from HTND#82 are cleared (tests only, apart from one removed empty block) | 🔀 Merged | 2.18.3 | [HTND#86](https://github.com/HoosatNetwork/HTND/pull/86) |
 | Opt-in shutdown stress harness (see area 1) | 🔄 In review | — | [HTND#55](https://github.com/HoosatNetwork/HTND/pull/55) |
 | Run more of the unit tests on every push, on every release architecture | 📝 Proposed | — | [HTN-19](findings/HTN-19.md), [HTN-24](findings/HTN-24.md), [HTN-25](findings/HTN-25.md), [HTN-34](findings/HTN-34.md) |
 

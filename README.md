@@ -49,8 +49,10 @@ Earlier releases and every change in detail: [CHANGES.md](CHANGES.md#by-release)
   the new data against its commitment, now runs without stopping block processing
   ([#77](https://github.com/HoosatNetwork/HTND/pull/77), the approach the Hoosat developers chose in
   [#41](https://github.com/HoosatNetwork/HTND/issues/41)). On a private test network the longest pause per move fell
-  from 8.4–9.5 s to 0.6–1.7 s; mainnet holds about 16 times more data, so testnet comes next. Writing the data still
-  pauses ([#42](https://github.com/HoosatNetwork/HTND/issues/42)).
+  from 8.4–9.5 s to 0.6–1.7 s; mainnet holds about 16 times more data, so testnet comes next. Writing the data is now
+  split into small steps that resume after a crash, and old history is deleted in the background
+  ([#82](https://github.com/HoosatNetwork/HTND/pull/82), from [#42](https://github.com/HoosatNetwork/HTND/issues/42));
+  its effect on the pause is not measured yet.
 - 🔀 / 🔄 **Database care.** Four small changes, each after its own issue (the first merged, three in review): a read error during a walk over
   stored data is no longer silently treated as the end, the on-disk format cannot change by accident in a library
   update, the database keeps within the open-file limit, and the node logs its storage health
