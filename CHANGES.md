@@ -1,6 +1,6 @@
 # Changes by area
 
-Every change we have sent to the Hoosat developers. Status checked against GitHub on 29 October 2026.
+Every change we have sent to the Hoosat developers. Status checked against GitHub on 30 October 2026.
 
 | Mark | Meaning |
 |---|---|
@@ -10,7 +10,7 @@ Every change we have sent to the Hoosat developers. Status checked against GitHu
 | 🧪 Being tested | Fix written; being measured before it is sent |
 | 📝 Proposed | Written up here; not yet sent |
 
-Totals on 29 October 2026: HTND pull requests 8 released, 22 merged, 6 in review; HTND issues 7 in review, 1 closed; bridge pull requests 4 merged, 1 in review.
+Totals on 30 October 2026: HTND pull requests 8 released, 23 merged, 5 in review; HTND issues 7 in review, 1 closed; bridge pull requests 4 merged, 1 in review.
 
 ## By release
 
