@@ -60,6 +60,7 @@ Totals on 31 October 2026: HTND pull requests 8 released, 24 merged, 5 in review
 | The database keeps fewer files open than the process is allowed, leaving room for peer connections and logs | 🔄 In review | — | [HTND#74](https://github.com/HoosatNetwork/HTND/pull/74) ([HTND#71](https://github.com/HoosatNetwork/HTND/issues/71)) |
 | The node logs its effective database settings at start and a short storage health summary while it runs | 🔀 Merged | 2.18.3 | [HTND#75](https://github.com/HoosatNetwork/HTND/pull/75) ([HTND#72](https://github.com/HoosatNetwork/HTND/issues/72)) |
 | When the database is found corrupt at start, keep diagnostics instead of silently deleting everything and re-syncing | 📝 Proposed | — | [HTN-03](findings/HTN-03.md), [HTN-43](findings/HTN-43.md) |
+| Proposal: when the database is damaged, the node names the likely cause (a power cut, or faulty memory or disk) and stops restarting in a loop on a damaged data file | 🔄 In review | — | [HTND#90](https://github.com/HoosatNetwork/HTND/issues/90) |
 
 <details>
 <summary>Technical details: data safety</summary>
@@ -162,6 +163,7 @@ Totals on 31 October 2026: HTND pull requests 8 released, 24 merged, 5 in review
 | Bridge: job slots are not overwritten while a miner may still submit to them; job ids are allocated under a lock | 🔀 Merged | 1.8.2 | [bridge#12](https://github.com/HoosatNetwork/htn-stratum-bridge/pull/12) |
 | Bridge: stratum lines that arrive in pieces are reassembled correctly, with a fixed line limit | 🔄 In review | — | [bridge#11](https://github.com/HoosatNetwork/htn-stratum-bridge/pull/11) |
 | Bridge: a header-serialization test is checked against the node's own hash (the test had a stale expected value) | 🔀 Merged | 1.8.2 | [bridge#13](https://github.com/HoosatNetwork/htn-stratum-bridge/pull/13) |
+| Node: after the node restarts, programs connected over RPC (such as a mining bridge) register for their notifications again automatically, so new block templates keep arriving | 🔄 In review | — | [HTND#91](https://github.com/HoosatNetwork/HTND/pull/91) |
 
 <details>
 <summary>Technical details: mining and bridge</summary>
