@@ -1,6 +1,6 @@
 # Changes by area
 
-Every change we have sent to the Hoosat developers. Status checked against GitHub on 31 October 2026.
+Every change we have sent to the Hoosat developers. Status checked against GitHub on 2 November 2026.
 
 | Mark | Meaning |
 |---|---|
@@ -10,10 +10,11 @@ Every change we have sent to the Hoosat developers. Status checked against GitHu
 | 🧪 Being tested | Fix written; being measured before it is sent |
 | 📝 Proposed | Written up here; not yet sent |
 
-Totals on 31 October 2026: HTND pull requests 8 released, 24 merged, 5 in review; HTND issues 7 in review, 1 closed; bridge pull requests 4 merged, 1 in review.
+Totals on 2 November 2026: HTND pull requests 31 released, 1 merged, 6 in review; HTND issues 5 in review, 4 closed; bridge pull requests 4 merged, 1 in review.
 
 ## By release
 
+- **HTND v2.18.3**, 1 November 2026: 23 changes — [HTND#35](https://github.com/HoosatNetwork/HTND/pull/35), [HTND#43](https://github.com/HoosatNetwork/HTND/pull/43), [HTND#45](https://github.com/HoosatNetwork/HTND/pull/45), [HTND#48](https://github.com/HoosatNetwork/HTND/pull/48), [HTND#49](https://github.com/HoosatNetwork/HTND/pull/49), [HTND#50](https://github.com/HoosatNetwork/HTND/pull/50), [HTND#51](https://github.com/HoosatNetwork/HTND/pull/51), [HTND#52](https://github.com/HoosatNetwork/HTND/pull/52), [HTND#53](https://github.com/HoosatNetwork/HTND/pull/53), [HTND#57](https://github.com/HoosatNetwork/HTND/pull/57), [HTND#60](https://github.com/HoosatNetwork/HTND/pull/60), [HTND#61](https://github.com/HoosatNetwork/HTND/pull/61), [HTND#62](https://github.com/HoosatNetwork/HTND/pull/62), [HTND#64](https://github.com/HoosatNetwork/HTND/pull/64), [HTND#65](https://github.com/HoosatNetwork/HTND/pull/65), [HTND#66](https://github.com/HoosatNetwork/HTND/pull/66), [HTND#67](https://github.com/HoosatNetwork/HTND/pull/67), [HTND#75](https://github.com/HoosatNetwork/HTND/pull/75), [HTND#76](https://github.com/HoosatNetwork/HTND/pull/76), [HTND#77](https://github.com/HoosatNetwork/HTND/pull/77), [HTND#81](https://github.com/HoosatNetwork/HTND/pull/81), [HTND#82](https://github.com/HoosatNetwork/HTND/pull/82), [HTND#86](https://github.com/HoosatNetwork/HTND/pull/86)
 - **HTND v2.18.2**, 16 October 2026: 8 changes — [HTND#36](https://github.com/HoosatNetwork/HTND/pull/36), [HTND#37](https://github.com/HoosatNetwork/HTND/pull/37), [HTND#38](https://github.com/HoosatNetwork/HTND/pull/38), [HTND#39](https://github.com/HoosatNetwork/HTND/pull/39), [HTND#40](https://github.com/HoosatNetwork/HTND/pull/40), [HTND#44](https://github.com/HoosatNetwork/HTND/pull/44), [HTND#46](https://github.com/HoosatNetwork/HTND/pull/46), [HTND#47](https://github.com/HoosatNetwork/HTND/pull/47)
 
 ## 1. Stopping and restarting a node
@@ -24,12 +25,12 @@ Totals on 31 October 2026: HTND pull requests 8 released, 24 merged, 5 in review
 | The node waits for running RPC requests before closing the database | ✅ Released | v2.18.2 | [HTND#46](https://github.com/HoosatNetwork/HTND/pull/46) |
 | Stopping no longer hangs when a new peer connects while the node is shutting down | ✅ Released | v2.18.2 | [HTND#40](https://github.com/HoosatNetwork/HTND/pull/40) |
 | Stopping no longer hangs on waking a connection loop that has already ended | ✅ Released | v2.18.2 | [HTND#36](https://github.com/HoosatNetwork/HTND/pull/36) |
-| A connection's message router is counted before its worker starts, so shutdown waits for it | 🔀 Merged | 2.18.3 | [HTND#48](https://github.com/HoosatNetwork/HTND/pull/48) |
-| The peer handshake waits for both of its workers before returning | 🔀 Merged | 2.18.3 | [HTND#49](https://github.com/HoosatNetwork/HTND/pull/49) |
-| The address manager stops writing to the database once the node has stopped | 🔀 Merged | 2.18.3 | [HTND#50](https://github.com/HoosatNetwork/HTND/pull/50) |
-| In-memory tables are written out at close when the write-ahead log is disabled | 🔀 Merged | 2.18.3 | [HTND#51](https://github.com/HoosatNetwork/HTND/pull/51) |
-| The node guide's systemd unit gets a stop timeout longer than the node's own, so systemd does not kill a node mid-shutdown | 🔀 Merged | 2.18.3 | [HTND#52](https://github.com/HoosatNetwork/HTND/pull/52) |
-| Log lines written after the logger is closed go to stderr instead of crashing the process | 🔀 Merged | 2.18.3 | [HTND#53](https://github.com/HoosatNetwork/HTND/pull/53) |
+| A connection's message router is counted before its worker starts, so shutdown waits for it | ✅ Released | v2.18.3 | [HTND#48](https://github.com/HoosatNetwork/HTND/pull/48) |
+| The peer handshake waits for both of its workers before returning | ✅ Released | v2.18.3 | [HTND#49](https://github.com/HoosatNetwork/HTND/pull/49) |
+| The address manager stops writing to the database once the node has stopped | ✅ Released | v2.18.3 | [HTND#50](https://github.com/HoosatNetwork/HTND/pull/50) |
+| In-memory tables are written out at close when the write-ahead log is disabled | ✅ Released | v2.18.3 | [HTND#51](https://github.com/HoosatNetwork/HTND/pull/51) |
+| The node guide's systemd unit gets a stop timeout longer than the node's own, so systemd does not kill a node mid-shutdown | ✅ Released | v2.18.3 | [HTND#52](https://github.com/HoosatNetwork/HTND/pull/52) |
+| Log lines written after the logger is closed go to stderr instead of crashing the process | ✅ Released | v2.18.3 | [HTND#53](https://github.com/HoosatNetwork/HTND/pull/53) |
 | A stop request ends the wait before an automatic update install | 🔄 In review | — | [HTND#54](https://github.com/HoosatNetwork/HTND/pull/54) |
 | An opt-in stress test that starts and stops the node many times to catch shutdown bugs (test only) | 🔄 In review | — | [HTND#55](https://github.com/HoosatNetwork/HTND/pull/55) |
 
@@ -54,11 +55,11 @@ Totals on 31 October 2026: HTND pull requests 8 released, 24 merged, 5 in review
 | What changed | Status | Version | Link |
 |---|---|---|---|
 | A crash during the pruning clean-up no longer leaves the node unable to start (it used to fail with `blockHash is nil` and need a full reset) | ✅ Released | v2.18.2 | [HTND#38](https://github.com/HoosatNetwork/HTND/pull/38) |
-| A storage error while accepting a transaction is reported as an error instead of being treated as a bad transaction | 🔀 Merged | 2.18.3 | [HTND#57](https://github.com/HoosatNetwork/HTND/pull/57) |
-| With the optional LevelDB database, a read error part-way through a walk over stored data is reported instead of the walk looking complete | 🔀 Merged | 2.18.3 | [HTND#76](https://github.com/HoosatNetwork/HTND/pull/76) ([HTND#69](https://github.com/HoosatNetwork/HTND/issues/69)) |
+| A storage error while accepting a transaction is reported as an error instead of being treated as a bad transaction | ✅ Released | v2.18.3 | [HTND#57](https://github.com/HoosatNetwork/HTND/pull/57) |
+| With the optional LevelDB database, a read error part-way through a walk over stored data is reported instead of the walk looking complete | ✅ Released | v2.18.3 | [HTND#76](https://github.com/HoosatNetwork/HTND/pull/76) ([HTND#69](https://github.com/HoosatNetwork/HTND/issues/69)) |
 | The database's on-disk format is pinned, so a routine library update cannot leave older node versions unable to open the data | 🔄 In review | — | [HTND#73](https://github.com/HoosatNetwork/HTND/pull/73) ([HTND#70](https://github.com/HoosatNetwork/HTND/issues/70)) |
 | The database keeps fewer files open than the process is allowed, leaving room for peer connections and logs | 🔄 In review | — | [HTND#74](https://github.com/HoosatNetwork/HTND/pull/74) ([HTND#71](https://github.com/HoosatNetwork/HTND/issues/71)) |
-| The node logs its effective database settings at start and a short storage health summary while it runs | 🔀 Merged | 2.18.3 | [HTND#75](https://github.com/HoosatNetwork/HTND/pull/75) ([HTND#72](https://github.com/HoosatNetwork/HTND/issues/72)) |
+| The node logs its effective database settings at start and a short storage health summary while it runs | ✅ Released | v2.18.3 | [HTND#75](https://github.com/HoosatNetwork/HTND/pull/75) ([HTND#72](https://github.com/HoosatNetwork/HTND/issues/72)) |
 | When the database is found corrupt at start, keep diagnostics instead of silently deleting everything and re-syncing | 📝 Proposed | — | [HTN-03](findings/HTN-03.md), [HTN-43](findings/HTN-43.md) |
 | Proposal: when the database is damaged, the node names the likely cause (a power cut, or faulty memory or disk) and stops restarting in a loop on a damaged data file | 🔄 In review | — | [HTND#90](https://github.com/HoosatNetwork/HTND/issues/90) |
 
@@ -90,7 +91,7 @@ Totals on 31 October 2026: HTND pull requests 8 released, 24 merged, 5 in review
 |---|---|---|---|
 | Three caches that were allocated but never read are removed: 342.9 MB less per node | ✅ Released | v2.18.2 | [HTND#39](https://github.com/HoosatNetwork/HTND/pull/39) |
 | The database block cache is released when the database is closed | ✅ Released | v2.18.2 | [HTND#44](https://github.com/HoosatNetwork/HTND/pull/44) |
-| The default memory limit is applied when `GOMEMLIMIT` is set but empty | 🔀 Merged | 2.18.3 | [HTND#43](https://github.com/HoosatNetwork/HTND/pull/43) |
+| The default memory limit is applied when `GOMEMLIMIT` is set but empty | ✅ Released | v2.18.3 | [HTND#43](https://github.com/HoosatNetwork/HTND/pull/43) |
 | Derive the memory budget from the machine's RAM instead of fixed defaults that do not fit an 8 GB machine | 📝 Proposed | — | [HTN-17](findings/HTN-17.md) |
 
 <details>
@@ -112,16 +113,16 @@ Totals on 31 October 2026: HTND pull requests 8 released, 24 merged, 5 in review
 | What changed | Status | Version | Link |
 |---|---|---|---|
 | The block that moves the pruning point is passed on to peers before the node's own long clean-up, so the pause no longer piles up from node to node | ✅ Released | v2.18.2 | [HTND#47](https://github.com/HoosatNetwork/HTND/pull/47) |
-| The longest part of that clean-up, checking the new UTXO set against its commitment, runs without stopping block processing; on a private test network the longest pause per move fell from 8.4–9.5 s to 0.6–1.7 s | 🔀 Merged | 2.18.3 | [HTND#77](https://github.com/HoosatNetwork/HTND/pull/77) ([HTND#41](https://github.com/HoosatNetwork/HTND/issues/41)) |
-| Writing the new UTXO set is split into small steps that resume after a crash, and old history is deleted in the background, on every network; its effect on the pause is not measured yet | 🔀 Merged | 2.18.3 | [HTND#82](https://github.com/HoosatNetwork/HTND/pull/82) ([HTND#42](https://github.com/HoosatNetwork/HTND/issues/42)) |
+| The longest part of that clean-up, checking the new UTXO set against its commitment, runs without stopping block processing; on a private test network the longest pause per move fell from 8.4–9.5 s to 0.6–1.7 s | ✅ Released | v2.18.3 | [HTND#77](https://github.com/HoosatNetwork/HTND/pull/77) ([HTND#41](https://github.com/HoosatNetwork/HTND/issues/41)) |
+| Writing the new UTXO set is split into small steps that resume after a crash, and old history is deleted in the background, on every network; its effect on the pause is not measured yet | ✅ Released | v2.18.3 | [HTND#82](https://github.com/HoosatNetwork/HTND/pull/82) ([HTND#42](https://github.com/HoosatNetwork/HTND/issues/42)) |
 | Proposal: measure how long each part of the node holds and waits for its main lock, with a warning when a hold is long | 🔄 In review | — | [HTND#68](https://github.com/HoosatNetwork/HTND/issues/68) |
 | Proposal: the new RPC allow list keeps an operator's own RPC listener, and wildcard listeners keep accepting both IPv4 and IPv6 as before | 🔄 In review | — | [HTND#80](https://github.com/HoosatNetwork/HTND/issues/80) |
-| A block whose parents arrive while it is being checked is processed instead of triggering a small re-sync | 🔀 Merged | 2.18.3 | [HTND#61](https://github.com/HoosatNetwork/HTND/pull/61) |
-| The GetBlocks call no longer lists one block twice in its answer | 🔀 Merged | 2.18.3 | [HTND#62](https://github.com/HoosatNetwork/HTND/pull/62) |
-| A peer's reject message is kept at no more than 2 KiB in the node's error and log | 🔀 Merged | 2.18.3 | [HTND#64](https://github.com/HoosatNetwork/HTND/pull/64) |
-| A new block is no longer announced back to the peer that just sent it | 🔀 Merged | 2.18.3 | [HTND#65](https://github.com/HoosatNetwork/HTND/pull/65) |
+| A block whose parents arrive while it is being checked is processed instead of triggering a small re-sync | ✅ Released | v2.18.3 | [HTND#61](https://github.com/HoosatNetwork/HTND/pull/61) |
+| The GetBlocks call no longer lists one block twice in its answer | ✅ Released | v2.18.3 | [HTND#62](https://github.com/HoosatNetwork/HTND/pull/62) |
+| A peer's reject message is kept at no more than 2 KiB in the node's error and log | ✅ Released | v2.18.3 | [HTND#64](https://github.com/HoosatNetwork/HTND/pull/64) |
+| A new block is no longer announced back to the peer that just sent it | ✅ Released | v2.18.3 | [HTND#65](https://github.com/HoosatNetwork/HTND/pull/65) |
 | The `--enablebanning` switch is respected by the block-relay flow | 🔀 Merged | 2.18.2 | [HTND#56](https://github.com/HoosatNetwork/HTND/pull/56) |
-| A block with no transactions reports the zero hash as its merkle root | 🔀 Merged | 2.18.3 | [HTND#45](https://github.com/HoosatNetwork/HTND/pull/45) |
+| A block with no transactions reports the zero hash as its merkle root | ✅ Released | v2.18.3 | [HTND#45](https://github.com/HoosatNetwork/HTND/pull/45) |
 
 <details>
 <summary>Technical details: sync and network</summary>
@@ -157,7 +158,7 @@ Totals on 31 October 2026: HTND pull requests 8 released, 24 merged, 5 in review
 
 | What changed | Status | Version | Link |
 |---|---|---|---|
-| Node: the Hoohash proof-of-work check gives the same result on every CPU; builds where the compiler fuses multiply-add (Apple silicon, `GOAMD64>=v3`) no longer reject valid blocks | 🔀 Merged | 2.18.3 | [HTND#35](https://github.com/HoosatNetwork/HTND/pull/35) |
+| Node: the Hoohash proof-of-work check gives the same result on every CPU; builds where the compiler fuses multiply-add (Apple silicon, `GOAMD64>=v3`) no longer reject valid blocks | ✅ Released | v2.18.3 | [HTND#35](https://github.com/HoosatNetwork/HTND/pull/35) |
 | Bridge: the same proof-of-work fix for the bridge's own check | 🔀 Merged | 1.8.2 | [bridge#10](https://github.com/HoosatNetwork/htn-stratum-bridge/pull/10) |
 | Bridge: miners get a fresh job as soon as the node announces a new block, instead of a cached one built on old tips | 🔀 Merged | 1.8.2 | [bridge#9](https://github.com/HoosatNetwork/htn-stratum-bridge/pull/9) |
 | Bridge: job slots are not overwritten while a miner may still submit to them; job ids are allocated under a lock | 🔀 Merged | 1.8.2 | [bridge#12](https://github.com/HoosatNetwork/htn-stratum-bridge/pull/12) |
@@ -186,12 +187,12 @@ Totals on 31 October 2026: HTND pull requests 8 released, 24 merged, 5 in review
 
 | What changed | Status | Version | Link |
 |---|---|---|---|
-| A pruning test reads the pruning-point UTXOs with a bounded limit; the unbounded version ran out of memory on an 8 GB machine and took the rest of the test run with it | 🔀 Merged | 2.18.3 | [HTND#60](https://github.com/HoosatNetwork/HTND/pull/60) |
+| A pruning test reads the pruning-point UTXOs with a bounded limit; the unbounded version ran out of memory on an 8 GB machine and took the rest of the test run with it | ✅ Released | v2.18.3 | [HTND#60](https://github.com/HoosatNetwork/HTND/pull/60) |
 | The script builder writes a single zero byte as data instead of as an empty value | 🔄 In review | — | [HTND#63](https://github.com/HoosatNetwork/HTND/pull/63) |
-| The script builder no longer crashes when asked for a zero lock time or sequence number | 🔀 Merged | 2.18.3 | [HTND#67](https://github.com/HoosatNetwork/HTND/pull/67) |
-| The wallet daemon stops with an error when it cannot get the node's DAG information at start, instead of exiting silently | 🔀 Merged | 2.18.3 | [HTND#66](https://github.com/HoosatNetwork/HTND/pull/66) |
-| A pruning test added with the pruning check change no longer fails on single-CPU or busy machines (test only) | 🔀 Merged | 2.18.3 | [HTND#81](https://github.com/HoosatNetwork/HTND/pull/81) |
-| The unit tests follow the deliberate 2.18.3 changes again, with every safety guard kept, and the two lint findings from HTND#82 are cleared (tests only, apart from one removed empty block) | 🔀 Merged | 2.18.3 | [HTND#86](https://github.com/HoosatNetwork/HTND/pull/86) |
+| The script builder no longer crashes when asked for a zero lock time or sequence number | ✅ Released | v2.18.3 | [HTND#67](https://github.com/HoosatNetwork/HTND/pull/67) |
+| The wallet daemon stops with an error when it cannot get the node's DAG information at start, instead of exiting silently | ✅ Released | v2.18.3 | [HTND#66](https://github.com/HoosatNetwork/HTND/pull/66) |
+| A pruning test added with the pruning check change no longer fails on single-CPU or busy machines (test only) | ✅ Released | v2.18.3 | [HTND#81](https://github.com/HoosatNetwork/HTND/pull/81) |
+| The unit tests follow the deliberate 2.18.3 changes again, with every safety guard kept, and the two lint findings from HTND#82 are cleared (tests only, apart from one removed empty block) | ✅ Released | v2.18.3 | [HTND#86](https://github.com/HoosatNetwork/HTND/pull/86) |
 | Opt-in shutdown stress harness (see area 1) | 🔄 In review | — | [HTND#55](https://github.com/HoosatNetwork/HTND/pull/55) |
 | Run more of the unit tests on every push, on every release architecture | 📝 Proposed | — | [HTN-19](findings/HTN-19.md), [HTN-24](findings/HTN-24.md), [HTN-25](findings/HTN-25.md), [HTN-34](findings/HTN-34.md) |
 
