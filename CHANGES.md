@@ -93,6 +93,7 @@ Totals on 3 November 2026: HTND pull requests 31 released, 2 merged, 5 in review
 | The database block cache is released when the database is closed | ✅ Released | v2.18.2 | [HTND#44](https://github.com/HoosatNetwork/HTND/pull/44) |
 | The default memory limit is applied when `GOMEMLIMIT` is set but empty | ✅ Released | v2.18.3 | [HTND#43](https://github.com/HoosatNetwork/HTND/pull/43) |
 | Derive the memory budget from the machine's RAM instead of fixed defaults that do not fit an 8 GB machine | 📝 Proposed | — | [HTN-17](findings/HTN-17.md) |
+| The node logs the memory limit and garbage-collector setting it actually runs with, in the log file as well as on the console | 🔄 In review | — | [HTND#101](https://github.com/HoosatNetwork/HTND/pull/101) |
 
 <details>
 <summary>Technical details: memory</summary>
@@ -123,6 +124,7 @@ Totals on 3 November 2026: HTND pull requests 31 released, 2 merged, 5 in review
 | A new block is no longer announced back to the peer that just sent it | ✅ Released | v2.18.3 | [HTND#65](https://github.com/HoosatNetwork/HTND/pull/65) |
 | The `--enablebanning` switch is respected by the block-relay flow | 🔀 Merged | 2.18.2 | [HTND#56](https://github.com/HoosatNetwork/HTND/pull/56) |
 | A block with no transactions reports the zero hash as its merkle root | ✅ Released | v2.18.3 | [HTND#45](https://github.com/HoosatNetwork/HTND/pull/45) |
+| After the ML-DSA hard fork activates, the mempool counts ML-DSA signature checks toward the P2SH standardness limit, as it already does for the older signature checks | 🔄 In review | — | [HTND#100](https://github.com/HoosatNetwork/HTND/pull/100) |
 
 <details>
 <summary>Technical details: sync and network</summary>
