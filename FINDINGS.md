@@ -109,7 +109,7 @@ and is listed in the table above).
 | [HTND#51](https://github.com/HoosatNetwork/HTND/pull/51) | Flush the memtables on close when the write-ahead log is disabled (clean shutdown) | Merged 2026-10-17 into 2.18.3 (b3c910522) |
 | [HTND#53](https://github.com/HoosatNetwork/HTND/pull/53) | Write log lines made after Close to stderr instead of panicking (clean shutdown) | Merged 2026-10-17 into 2.18.3 (c720972a2) |
 | [HTND#54](https://github.com/HoosatNetwork/HTND/pull/54) | Let Stop end the wait before an automatic update install (clean shutdown) | Submitted 2026-10-14 — open |
-| [HTND#55](https://github.com/HoosatNetwork/HTND/pull/55) | Opt-in shutdown stress harness (test only; clean shutdown) | Submitted 2026-10-14 — open |
+| [HTND#55](https://github.com/HoosatNetwork/HTND/pull/55) | Opt-in shutdown stress harness (test only; clean shutdown) | Submitted 2026-10-14 — closed by us 2026-11-07 (test only, not a fix) |
 | [HTND#56](https://github.com/HoosatNetwork/HTND/pull/56) | Respect --enablebanning in relay-flow bans | Submitted 2026-10-14 — open |
 | [HTND#57](https://github.com/HoosatNetwork/HTND/pull/57) | Treat a storage error during transaction acceptance as an error, not a rejection | Merged 2026-10-17 into 2.18.3 (e843cb378) |
 | [HTND#60](https://github.com/HoosatNetwork/HTND/pull/60) | Test: read the pruning point UTXOs with a bounded limit (the test ran out of memory on an 8 GB machine) | Merged 2026-10-17 into 2.18.3 (222ab70f4) |

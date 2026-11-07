@@ -32,7 +32,7 @@ Totals on 7 November 2026: HTND pull requests 31 released, 2 merged, 7 in review
 | The node guide's systemd unit gets a stop timeout longer than the node's own, so systemd does not kill a node mid-shutdown | ✅ Released | v2.18.3 | [HTND#52](https://github.com/HoosatNetwork/HTND/pull/52) |
 | Log lines written after the logger is closed go to stderr instead of crashing the process | ✅ Released | v2.18.3 | [HTND#53](https://github.com/HoosatNetwork/HTND/pull/53) |
 | A stop request ends the wait before an automatic update install | 🔄 In review | — | [HTND#54](https://github.com/HoosatNetwork/HTND/pull/54) |
-| An opt-in stress test that starts and stops the node many times to catch shutdown bugs (test only) | 🔄 In review | — | [HTND#55](https://github.com/HoosatNetwork/HTND/pull/55) |
+| An opt-in stress test that starts and stops the node many times to catch shutdown bugs (test only) | Closed by us 2026-11-07 (test only; we keep running it in our own testing) | — | [HTND#55](https://github.com/HoosatNetwork/HTND/pull/55) |
 
 <details>
 <summary>Technical details: shutdown</summary>
@@ -196,7 +196,7 @@ Totals on 7 November 2026: HTND pull requests 31 released, 2 merged, 7 in review
 | The wallet daemon stops with an error when it cannot get the node's DAG information at start, instead of exiting silently | ✅ Released | v2.18.3 | [HTND#66](https://github.com/HoosatNetwork/HTND/pull/66) |
 | A pruning test added with the pruning check change no longer fails on single-CPU or busy machines (test only) | ✅ Released | v2.18.3 | [HTND#81](https://github.com/HoosatNetwork/HTND/pull/81) |
 | The unit tests follow the deliberate 2.18.3 changes again, with every safety guard kept, and the two lint findings from HTND#82 are cleared (tests only, apart from one removed empty block) | ✅ Released | v2.18.3 | [HTND#86](https://github.com/HoosatNetwork/HTND/pull/86) |
-| Opt-in shutdown stress harness (see area 1) | 🔄 In review | — | [HTND#55](https://github.com/HoosatNetwork/HTND/pull/55) |
+| Opt-in shutdown stress harness (see area 1) | Closed by us 2026-11-07 (test only; we keep running it in our own testing) | — | [HTND#55](https://github.com/HoosatNetwork/HTND/pull/55) |
 | Run more of the unit tests on every push, on every release architecture | 📝 Proposed | — | [HTN-19](findings/HTN-19.md), [HTN-24](findings/HTN-24.md), [HTN-25](findings/HTN-25.md), [HTN-34](findings/HTN-34.md) |
 
 ## Proposed, not yet sent
