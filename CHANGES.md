@@ -1,6 +1,6 @@
 # Changes by area
 
-Every change we have sent to the Hoosat developers. Status checked against GitHub on 8 November 2026.
+Every change we have sent to the Hoosat developers. Status checked against GitHub on 9 November 2026.
 
 | Mark | Meaning |
 |---|---|
@@ -10,10 +10,12 @@ Every change we have sent to the Hoosat developers. Status checked against GitHu
 | 🧪 Being tested | Fix written; being measured before it is sent |
 | 📝 Proposed | Written up here; not yet sent |
 
-Totals on 8 November 2026: HTND pull requests 31 released, 2 merged, 6 in review, 1 closed; HTND issues 6 in review, 4 closed; bridge pull requests 4 merged, 2 in review; dnsseeder pull requests 2 in review.
+Totals on 9 November 2026: HTND pull requests 34 released, 1 merged, 4 in review, 1 closed; HTND issues 6 in review, 4 closed; bridge pull requests 4 released, 2 in review; dnsseeder pull requests 2 in review.
 
 ## By release
 
+- **bridge v1.9.0**, 8 November 2026: 4 changes — [bridge#9](https://github.com/HoosatNetwork/htn-stratum-bridge/pull/9), [bridge#10](https://github.com/HoosatNetwork/htn-stratum-bridge/pull/10), [bridge#12](https://github.com/HoosatNetwork/htn-stratum-bridge/pull/12), [bridge#13](https://github.com/HoosatNetwork/htn-stratum-bridge/pull/13)
+- **HTND v2.19.0**, 8 November 2026: 3 changes — [HTND#91](https://github.com/HoosatNetwork/HTND/pull/91), [HTND#100](https://github.com/HoosatNetwork/HTND/pull/100), [HTND#101](https://github.com/HoosatNetwork/HTND/pull/101)
 - **HTND v2.18.3**, 1 November 2026: 23 changes — [HTND#35](https://github.com/HoosatNetwork/HTND/pull/35), [HTND#43](https://github.com/HoosatNetwork/HTND/pull/43), [HTND#45](https://github.com/HoosatNetwork/HTND/pull/45), [HTND#48](https://github.com/HoosatNetwork/HTND/pull/48), [HTND#49](https://github.com/HoosatNetwork/HTND/pull/49), [HTND#50](https://github.com/HoosatNetwork/HTND/pull/50), [HTND#51](https://github.com/HoosatNetwork/HTND/pull/51), [HTND#52](https://github.com/HoosatNetwork/HTND/pull/52), [HTND#53](https://github.com/HoosatNetwork/HTND/pull/53), [HTND#57](https://github.com/HoosatNetwork/HTND/pull/57), [HTND#60](https://github.com/HoosatNetwork/HTND/pull/60), [HTND#61](https://github.com/HoosatNetwork/HTND/pull/61), [HTND#62](https://github.com/HoosatNetwork/HTND/pull/62), [HTND#64](https://github.com/HoosatNetwork/HTND/pull/64), [HTND#65](https://github.com/HoosatNetwork/HTND/pull/65), [HTND#66](https://github.com/HoosatNetwork/HTND/pull/66), [HTND#67](https://github.com/HoosatNetwork/HTND/pull/67), [HTND#75](https://github.com/HoosatNetwork/HTND/pull/75), [HTND#76](https://github.com/HoosatNetwork/HTND/pull/76), [HTND#77](https://github.com/HoosatNetwork/HTND/pull/77), [HTND#81](https://github.com/HoosatNetwork/HTND/pull/81), [HTND#82](https://github.com/HoosatNetwork/HTND/pull/82), [HTND#86](https://github.com/HoosatNetwork/HTND/pull/86)
 - **HTND v2.18.2**, 16 October 2026: 8 changes — [HTND#36](https://github.com/HoosatNetwork/HTND/pull/36), [HTND#37](https://github.com/HoosatNetwork/HTND/pull/37), [HTND#38](https://github.com/HoosatNetwork/HTND/pull/38), [HTND#39](https://github.com/HoosatNetwork/HTND/pull/39), [HTND#40](https://github.com/HoosatNetwork/HTND/pull/40), [HTND#44](https://github.com/HoosatNetwork/HTND/pull/44), [HTND#46](https://github.com/HoosatNetwork/HTND/pull/46), [HTND#47](https://github.com/HoosatNetwork/HTND/pull/47)
 
@@ -93,7 +95,7 @@ Totals on 8 November 2026: HTND pull requests 31 released, 2 merged, 6 in review
 | The database block cache is released when the database is closed | ✅ Released | v2.18.2 | [HTND#44](https://github.com/HoosatNetwork/HTND/pull/44) |
 | The default memory limit is applied when `GOMEMLIMIT` is set but empty | ✅ Released | v2.18.3 | [HTND#43](https://github.com/HoosatNetwork/HTND/pull/43) |
 | Derive the memory budget from the machine's RAM instead of fixed defaults that do not fit an 8 GB machine | 📝 Proposed | — | [HTN-17](findings/HTN-17.md) |
-| The node logs the memory limit and garbage-collector setting it actually runs with, in the log file as well as on the console | 🔄 In review | — | [HTND#101](https://github.com/HoosatNetwork/HTND/pull/101) |
+| The node logs the memory limit and garbage-collector setting it actually runs with, in the log file as well as on the console | ✅ Released | v2.19.0 | [HTND#101](https://github.com/HoosatNetwork/HTND/pull/101) |
 
 <details>
 <summary>Technical details: memory</summary>
@@ -127,7 +129,7 @@ Totals on 8 November 2026: HTND pull requests 31 released, 2 merged, 6 in review
 | A new block is no longer announced back to the peer that just sent it | ✅ Released | v2.18.3 | [HTND#65](https://github.com/HoosatNetwork/HTND/pull/65) |
 | The `--enablebanning` switch is respected by the block-relay flow | 🔀 Merged | 2.18.2 | [HTND#56](https://github.com/HoosatNetwork/HTND/pull/56) |
 | A block with no transactions reports the zero hash as its merkle root | ✅ Released | v2.18.3 | [HTND#45](https://github.com/HoosatNetwork/HTND/pull/45) |
-| After the ML-DSA hard fork activates, the mempool counts ML-DSA signature checks toward the P2SH standardness limit, as it already does for the older signature checks | 🔄 In review | — | [HTND#100](https://github.com/HoosatNetwork/HTND/pull/100) |
+| After the ML-DSA hard fork activates, the mempool counts ML-DSA signature checks toward the P2SH standardness limit, as it already does for the older signature checks | ✅ Released | v2.19.0 | [HTND#100](https://github.com/HoosatNetwork/HTND/pull/100) |
 
 <details>
 <summary>Technical details: sync and network</summary>
@@ -164,13 +166,13 @@ Totals on 8 November 2026: HTND pull requests 31 released, 2 merged, 6 in review
 | What changed | Status | Version | Link |
 |---|---|---|---|
 | Node: the Hoohash proof-of-work check gives the same result on every CPU; builds where the compiler fuses multiply-add (Apple silicon, `GOAMD64>=v3`) no longer reject valid blocks | ✅ Released | v2.18.3 | [HTND#35](https://github.com/HoosatNetwork/HTND/pull/35) |
-| Bridge: the same proof-of-work fix for the bridge's own check | 🔀 Merged | 1.8.2 | [bridge#10](https://github.com/HoosatNetwork/htn-stratum-bridge/pull/10) |
-| Bridge: miners get a fresh job as soon as the node announces a new block, instead of a cached one built on old tips | 🔀 Merged | 1.8.2 | [bridge#9](https://github.com/HoosatNetwork/htn-stratum-bridge/pull/9) |
-| Bridge: job slots are not overwritten while a miner may still submit to them; job ids are allocated under a lock | 🔀 Merged | 1.8.2 | [bridge#12](https://github.com/HoosatNetwork/htn-stratum-bridge/pull/12) |
+| Bridge: the same proof-of-work fix for the bridge's own check | ✅ Released | v1.9.0 | [bridge#10](https://github.com/HoosatNetwork/htn-stratum-bridge/pull/10) |
+| Bridge: miners get a fresh job as soon as the node announces a new block, instead of a cached one built on old tips | ✅ Released | v1.9.0 | [bridge#9](https://github.com/HoosatNetwork/htn-stratum-bridge/pull/9) |
+| Bridge: job slots are not overwritten while a miner may still submit to them; job ids are allocated under a lock | ✅ Released | v1.9.0 | [bridge#12](https://github.com/HoosatNetwork/htn-stratum-bridge/pull/12) |
 | Bridge: stratum lines that arrive in pieces are reassembled correctly, with a fixed line limit | 🔄 In review | — | [bridge#11](https://github.com/HoosatNetwork/htn-stratum-bridge/pull/11) |
-| Bridge: a header-serialization test is checked against the node's own hash (the test had a stale expected value) | 🔀 Merged | 1.8.2 | [bridge#13](https://github.com/HoosatNetwork/htn-stratum-bridge/pull/13) |
+| Bridge: a header-serialization test is checked against the node's own hash (the test had a stale expected value) | ✅ Released | v1.9.0 | [bridge#13](https://github.com/HoosatNetwork/htn-stratum-bridge/pull/13) |
 | Bridge: after the node restarts, the bridge registers again for new-template notifications, so miners keep getting fresh jobs | 🔄 In review | — | [bridge#16](https://github.com/HoosatNetwork/htn-stratum-bridge/pull/16) |
-| Node: after the node restarts, programs connected over RPC (such as a mining bridge) register for their notifications again automatically, so new block templates keep arriving | 🔀 Merged | 2.18.4 | [HTND#91](https://github.com/HoosatNetwork/HTND/pull/91) |
+| Node: after the node restarts, programs connected over RPC (such as a mining bridge) register for their notifications again automatically, so new block templates keep arriving | ✅ Released | v2.19.0 | [HTND#91](https://github.com/HoosatNetwork/HTND/pull/91) |
 
 <details>
 <summary>Technical details: mining and bridge</summary>
