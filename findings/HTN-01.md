@@ -2,7 +2,7 @@
 
 | Severity | Category | Evidence level | Chain impact | Proposed action | Status | Upstream |
 |---|---|---|---|---|---|---|
-| High | consensus | Reproduced | none | PR | Merged 2026-10-17 into 2.18.3 (dd7bd9067) and bridge 1.8.2 (99f98500a) | PR [HTND#35](https://github.com/HoosatNetwork/HTND/pull/35), [bridge#10](https://github.com/HoosatNetwork/htn-stratum-bridge/pull/10) |
+| High | consensus | Reproduced | none | PR | Merged 2026-10-17 into 2.18.3 (dd7bd9067) and bridge 1.8.2 (99f98500a) — released in v2.18.3 (1 November 2026) and bridge v1.9.0 (8 November 2026) | PR [HTND#35](https://github.com/HoosatNetwork/HTND/pull/35), [bridge#10](https://github.com/HoosatNetwork/htn-stratum-bridge/pull/10) |
 
 ## Summary
 
@@ -61,5 +61,5 @@ None for the network. The change corrects PoW evaluation only on builds that alr
 
 ## Upstream
 
-PR [HTND#35](https://github.com/HoosatNetwork/HTND/pull/35) and [bridge#10](https://github.com/HoosatNetwork/htn-stratum-bridge/pull/10) — in review.
+PR [HTND#35](https://github.com/HoosatNetwork/HTND/pull/35) and [bridge#10](https://github.com/HoosatNetwork/htn-stratum-bridge/pull/10) — merged, released in v2.18.3 and bridge v1.9.0.
 

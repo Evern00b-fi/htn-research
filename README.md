@@ -16,66 +16,59 @@ developers can accept or reject on its own. The Hoosat developers decide what go
 
 ## What is better now
 
-All of these are in **HTND v2.18.2** (released 16 October 2026). Update your node to get them.
+The latest releases are **HTND v2.19.0** and **htn-stratum-bridge v1.9.0** (both 8 November 2026). Update your node
+and your bridge to get these changes.
 
-**Stability and clean shutdowns**
+**Mining**
 
-- ✅ Released in v2.18.2 — Stopping a busy node no longer crashes it with a "database closed" error. The node now waits
-  for its ongoing work before closing the database, and exits without touching it if that takes too long.
-- ✅ Released in v2.18.2 — Stopping a node no longer hangs when a peer connects at the wrong moment.
+- ✅ Released in bridge v1.9.0 — Miners get a fresh job as soon as the node announces a new block, instead of a stored
+  one built on older blocks. On one solo bridge, own blocks missing a block the node already knew fell from 46.7 % to
+  8.5 %.
+- ✅ Released in bridge v1.9.0 — A job is no longer replaced while a miner may still send results for it.
+- ✅ Released in bridge v1.9.0 — The bridge checks proof of work the same way on every CPU, as the node does since
+  v2.18.3. Before, an unpatched Mac build rejected 101/183 real mainnet blocks.
+- ✅ Released in v2.19.0 — After the node restarts, a connected mining bridge (or any other program using the node's
+  RPC) is signed up for its notifications again automatically, so miners keep getting new jobs.
 
-**Safety of your node's data**
+**Running a node**
 
-- ✅ Released in v2.18.2 — A crash or kill during the regular "pruning" clean-up no longer leaves the node unable to
-  start. Before, the only cure was a full reset and re-download.
+- ✅ Released in v2.19.0 — The node logs the memory limit and garbage-collector setting it actually runs with, in the
+  log file as well as on screen.
+- ✅ Released in v2.19.0 — Once the ML-DSA signature upgrade is active, the mempool also counts ML-DSA signature
+  checks toward its standardness limit for P2SH inputs, as it already does for the older signature checks.
+- ✅ Released in v2.18.3 — Coming from v2.18.2, v2.18.3 and v2.19.0 together also bring a shorter pruning pause, no
+  needless mini re-syncs, cleaner shutdowns, the same proof-of-work result on every CPU, a storage health summary in
+  the log and smaller fixes.
 
-**Memory**
-
-- ✅ Released in v2.18.2 — Each node uses 342.9 MB less memory (three caches that were allocated but never read are gone),
-  and the database cache is freed properly at shutdown.
-
-**Sync and network**
-
-- ✅ Released in v2.18.2 — When a block moves the pruning point (every few hours), the node now passes it on to its
-  peers before doing its own long clean-up. Before, the pause piled up from node to node across the network. Each
-  node's own pause still exists; see below.
-
-Earlier releases and every change in detail: [CHANGES.md](CHANGES.md#by-release).
+Earlier releases (v2.18.2: no crash when stopping a busy node, a safe pruning clean-up, 342.9 MB less memory per node)
+and every change in detail: [CHANGES.md](CHANGES.md#by-release).
 
 ## What we are working on
 
-- 🔀 Merged, in the next release — **The pruning pause.** Every few hours each node stops processing blocks for minutes while it rebuilds
-  its pruning data; on our nodes running v2.18.2 about 2–6 minutes per node. The fix for the longest part, the check of
-  the new data against its commitment, now runs without stopping block processing
+- ✅ Released in v2.18.3, measurement next — **The pruning pause.** Every few hours each node stops processing blocks
+  for minutes while it rebuilds its pruning data; on our nodes running v2.18.2 about 2–6 minutes per node. The check of
+  the new data against its commitment, the longest part, now runs without stopping block processing
   ([#77](https://github.com/HoosatNetwork/HTND/pull/77), the approach the Hoosat developers chose in
   [#41](https://github.com/HoosatNetwork/HTND/issues/41)). On a private test network the longest pause per move fell
   from 8.4–9.5 s to 0.6–1.7 s; mainnet holds about 16 times more data, so testnet comes next. Writing the data is now
   split into small steps that resume after a crash, and old history is deleted in the background
   ([#82](https://github.com/HoosatNetwork/HTND/pull/82), from [#42](https://github.com/HoosatNetwork/HTND/issues/42));
   its effect on the pause is not measured yet.
-- 🔀 / 🔄 **Database care.** Four small changes, each after its own issue (the first merged, three in review): a read error during a walk over
-  stored data is no longer silently treated as the end, the on-disk format cannot change by accident in a library
-  update, the database keeps within the open-file limit, and the node logs its storage health
+- ✅ / 🔄 **Database care.** Four small changes, each after its own issue. Released in v2.18.3: a read error during a
+  walk over stored data is no longer silently treated as the end, and the node logs its storage health. In review: the
+  on-disk format cannot change by accident in a library update, and the database keeps within the open-file limit
   ([#73](https://github.com/HoosatNetwork/HTND/pull/73)–[#76](https://github.com/HoosatNetwork/HTND/pull/76)).
-- 🔀 Merged, in the next release — **Fewer needless mini re-syncs.** A timing gap made a node start a small re-sync
-  when a block's parents arrived while it was being checked. In a side-by-side test on a private network the fix cut
-  these from 6.6 per node per hour to 0 ([#61](https://github.com/HoosatNetwork/HTND/pull/61)).
-- 🔀 Merged, in the next release — **Clean shutdown, part two.** Six of eight small fixes so the node stops cleanly
-  every time: no writes after stop, no log panics, a matching timeout in the systemd guide
-  ([#48](https://github.com/HoosatNetwork/HTND/pull/48)–[#53](https://github.com/HoosatNetwork/HTND/pull/53)); the
-  auto-updater wait and the stress harness are still in review.
-- 🔀 Merged, in the next release — **Same proof-of-work result on every CPU.** On Apple-silicon Macs (and some newer
-  x86 builds) the compiler can fuse two floating-point steps, and the Hoohash check comes out different: an unpatched
-  Mac build rejected 101/183 real mainnet blocks. The fix forbids that fusion
-  ([#35](https://github.com/HoosatNetwork/HTND/pull/35), [bridge #10](https://github.com/HoosatNetwork/htn-stratum-bridge/pull/10)).
-- 🔀 Merged, in the next bridge release — **Mining bridge.** Fresher jobs for miners right after a new block, safer
-  job bookkeeping and a repaired test; sturdier line handling is still in review
-  ([bridge #9–#13](https://github.com/HoosatNetwork/htn-stratum-bridge/pulls)).
-- 🔀 / 🔄 **Smaller fixes:** memory-limit default, a storage error no longer treated as a bad transaction, GetBlocks
-  without duplicates, no block announced back to its sender and test fixes are merged; the banning switch, a 2 KiB cap
-  on reject messages and a script-builder fix are in review. Listed in [CHANGES.md](CHANGES.md).
-- 🔄 In review — **Measuring the main lock.** A proposal to log how long each part of the node holds and waits for its
-  main lock ([#68](https://github.com/HoosatNetwork/HTND/issues/68)), so slowdowns can be traced to a cause.
+- 🔄 In review — **Clean shutdown, last part.** Six of eight small fixes are released in v2.18.3
+  ([#48](https://github.com/HoosatNetwork/HTND/pull/48)–[#53](https://github.com/HoosatNetwork/HTND/pull/53)). A stop
+  request that ends the wait before an automatic update install is in review
+  ([#54](https://github.com/HoosatNetwork/HTND/pull/54)); the stress test stays in our own testing.
+- 🔄 In review — **Mining bridge.** Sturdier handling of stratum lines that arrive in pieces, and the bridge signing up
+  for new-template notifications again after a node restart
+  ([bridge #11](https://github.com/HoosatNetwork/htn-stratum-bridge/pull/11),
+  [bridge #16](https://github.com/HoosatNetwork/htn-stratum-bridge/pull/16)).
+- 🔀 / 🔄 **Smaller fixes:** the banning switch is merged; a script-builder fix is in review. The other small fixes
+  (memory-limit default, storage errors, GetBlocks, reject messages, block announcements, tests) are released in
+  v2.18.3. Listed in [CHANGES.md](CHANGES.md).
 - 📝 Proposed — Keep evidence instead of deleting the database when it is found corrupt; a memory budget that
   follows the machine's RAM; a study of the GHOSTDAG K parameter; and about 30 smaller items. See
   [CHANGES.md](CHANGES.md#proposed-not-yet-sent).

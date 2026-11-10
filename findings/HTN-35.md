@@ -2,7 +2,7 @@
 
 | Severity | Category | Evidence level | Chain impact | Proposed action | Status | Upstream |
 |---|---|---|---|---|---|---|
-| Informational | docs | Code-confirmed | none | PR | Merged 2026-10-17 into 2.18.3 (474a1f2de) | PR [HTND#52](https://github.com/HoosatNetwork/HTND/pull/52) |
+| Informational | docs | Code-confirmed | none | PR | Merged 2026-10-17 into 2.18.3 (474a1f2de) — released in v2.18.3 (1 November 2026) | PR [HTND#52](https://github.com/HoosatNetwork/HTND/pull/52) |
 
 ## Summary
 
@@ -48,6 +48,6 @@ None.
 
 ## Upstream
 
-PR [HTND#52](https://github.com/HoosatNetwork/HTND/pull/52) — in review.
+PR [HTND#52](https://github.com/HoosatNetwork/HTND/pull/52) — merged, released in v2.18.3.
 
 _AI disclosure: prepared with AI assistance (Claude by Anthropic; cross-reviewed with OpenAI Codex)._

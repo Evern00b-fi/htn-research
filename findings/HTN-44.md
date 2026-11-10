@@ -2,7 +2,7 @@
 
 | Severity | Category | Evidence level | Chain impact | Proposed action | Status | Upstream |
 |---|---|---|---|---|---|---|
-| Low | tooling | Measured | none | PR | Merged 2026-10-17 into 1.8.2 (6e4af6a5d) | PR [bridge#9](https://github.com/HoosatNetwork/htn-stratum-bridge/pull/9) |
+| Low | tooling | Measured | none | PR | Merged 2026-10-17 into 1.8.2 (6e4af6a5d) — released in bridge v1.9.0 (8 November 2026) | PR [bridge#9](https://github.com/HoosatNetwork/htn-stratum-bridge/pull/9) |
 
 ## Summary
 
@@ -65,5 +65,5 @@ None (pool software).
 
 ## Upstream
 
-PR [bridge#9](https://github.com/HoosatNetwork/htn-stratum-bridge/pull/9) — in review.
+PR [bridge#9](https://github.com/HoosatNetwork/htn-stratum-bridge/pull/9) — merged, released in bridge v1.9.0.
 

@@ -23,7 +23,7 @@ Paths and lines refer to HTND `a56566e86` (branch v2.18.1) unless stated otherwi
 Possible consequence, not reproduced end to end: "stop on inconsistency" becomes a livelock in which the node stays
 up, holds the lock for minutes per block and never recovers. Triggers include HTN-02 and any not-found during diff derivation.
 
-Since [HTND#77](https://github.com/HoosatNetwork/HTND/pull/77) (merged into 2.18.3) a commitment mismatch found at
+Since [HTND#77](https://github.com/HoosatNetwork/HTND/pull/77) (released in v2.18.3) a commitment mismatch found at
 runtime stops the node cleanly with a short diagnostic instead of re-running the update on every block; the
 livelock remains possible for other failures of the update itself.
 

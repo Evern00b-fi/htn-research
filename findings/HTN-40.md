@@ -2,7 +2,7 @@
 
 | Severity | Category | Evidence level | Chain impact | Proposed action | Status | Upstream |
 |---|---|---|---|---|---|---|
-| Medium | availability | Measured | none | Issue | Merged 2026-10-18 into 2.18.3 (a94e94058) as PR #77, the approach chosen in #41 | Issue [HTND#41](https://github.com/HoosatNetwork/HTND/issues/41), PR [HTND#77](https://github.com/HoosatNetwork/HTND/pull/77); follow-up [HTND#42](https://github.com/HoosatNetwork/HTND/issues/42) |
+| Medium | availability | Measured | none | Issue | Merged 2026-10-18 into 2.18.3 (a94e94058) as PR #77, the approach chosen in #41 — released in v2.18.3 (1 November 2026) | Issue [HTND#41](https://github.com/HoosatNetwork/HTND/issues/41), PR [HTND#77](https://github.com/HoosatNetwork/HTND/pull/77); follow-up [HTND#42](https://github.com/HoosatNetwork/HTND/issues/42), PR [HTND#82](https://github.com/HoosatNetwork/HTND/pull/82) |
 
 ## Summary
 
@@ -67,5 +67,5 @@ None (node-local).
 
 ## Upstream
 
-Issue [HTND#41](https://github.com/HoosatNetwork/HTND/issues/41) and follow-up [HTND#42](https://github.com/HoosatNetwork/HTND/issues/42) — in review.
+Issue [HTND#41](https://github.com/HoosatNetwork/HTND/issues/41), fixed by PR [HTND#77](https://github.com/HoosatNetwork/HTND/pull/77), and follow-up [HTND#42](https://github.com/HoosatNetwork/HTND/issues/42), fixed by PR [HTND#82](https://github.com/HoosatNetwork/HTND/pull/82) — both merged, released in v2.18.3.
 
