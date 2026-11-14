@@ -66,6 +66,7 @@ Totals on 14 November 2026: HTND pull requests 34 released, 3 merged, 4 in revie
 | The node logs its effective database settings at start and a short storage health summary while it runs | ✅ Released | v2.18.3 | [HTND#75](https://github.com/HoosatNetwork/HTND/pull/75) ([HTND#72](https://github.com/HoosatNetwork/HTND/issues/72)) |
 | When the database is found corrupt at start, keep diagnostics instead of silently deleting everything and re-syncing | 📝 Proposed | — | [HTN-03](findings/HTN-03.md), [HTN-43](findings/HTN-43.md) |
 | Proposal: when the database is damaged, the node names the likely cause (a power cut, or faulty memory or disk) and stops restarting in a loop on a damaged data file | 🔄 In review | — | [HTND#90](https://github.com/HoosatNetwork/HTND/issues/90) |
+| The database releases each write batch right after it is saved, so the memory is reused instead of waiting for garbage collection | 🔄 In review | — | [HTND#109](https://github.com/HoosatNetwork/HTND/pull/109) |
 
 <details>
 <summary>Technical details: data safety</summary>
@@ -98,6 +99,7 @@ Totals on 14 November 2026: HTND pull requests 34 released, 3 merged, 4 in revie
 | The default memory limit is applied when `GOMEMLIMIT` is set but empty | ✅ Released | v2.18.3 | [HTND#43](https://github.com/HoosatNetwork/HTND/pull/43) |
 | Derive the memory budget from the machine's RAM instead of fixed defaults that do not fit an 8 GB machine | 📝 Proposed | — | [HTN-17](findings/HTN-17.md) |
 | The node logs the memory limit and garbage-collector setting it actually runs with, in the log file as well as on the console | ✅ Released | v2.19.0 | [HTND#101](https://github.com/HoosatNetwork/HTND/pull/101) |
+| The node prepares the list of changed coins only when a client has subscribed to it, saving work after every block when nobody listens | 🔄 In review | — | [HTND#112](https://github.com/HoosatNetwork/HTND/pull/112) |
 
 <details>
 <summary>Technical details: memory</summary>
@@ -132,6 +134,8 @@ Totals on 14 November 2026: HTND pull requests 34 released, 3 merged, 4 in revie
 | The `--enablebanning` switch is respected by the block-relay flow | 🔀 Merged | 2.18.2 | [HTND#56](https://github.com/HoosatNetwork/HTND/pull/56) |
 | A block with no transactions reports the zero hash as its merkle root | ✅ Released | v2.18.3 | [HTND#45](https://github.com/HoosatNetwork/HTND/pull/45) |
 | After the ML-DSA hard fork activates, the mempool counts ML-DSA signature checks toward the P2SH standardness limit, as it already does for the older signature checks | ✅ Released | v2.19.0 | [HTND#100](https://github.com/HoosatNetwork/HTND/pull/100) |
+| A local error while a peer connects (for example a database error) disconnects that peer instead of stopping the whole node | 🔄 In review | — | [HTND#110](https://github.com/HoosatNetwork/HTND/pull/110) |
+| A chain-changed notification that refers to blocks removed after a sync is skipped with a warning instead of stopping the node | 🔄 In review | — | [HTND#111](https://github.com/HoosatNetwork/HTND/pull/111) |
 
 <details>
 <summary>Technical details: sync and network</summary>
@@ -205,6 +209,9 @@ Totals on 14 November 2026: HTND pull requests 34 released, 3 merged, 4 in revie
 | The unit tests follow the deliberate 2.18.3 changes again, with every safety guard kept, and the two lint findings from HTND#82 are cleared (tests only, apart from one removed empty block) | ✅ Released | v2.18.3 | [HTND#86](https://github.com/HoosatNetwork/HTND/pull/86) |
 | Opt-in shutdown stress harness (see area 1) | Closed by us 2026-11-07 (test only; we keep running it in our own testing) | — | [HTND#55](https://github.com/HoosatNetwork/HTND/pull/55) |
 | Run more of the unit tests on every push, on every release architecture | 📝 Proposed | — | [HTN-19](findings/HTN-19.md), [HTN-24](findings/HTN-24.md), [HTN-25](findings/HTN-25.md), [HTN-34](findings/HTN-34.md) |
+| htnwallet pays at least the minimum relay fee for a transaction's size, so heavy ML-DSA multisig spends are not rejected by nodes | 🔄 In review | — | [HTND#113](https://github.com/HoosatNetwork/HTND/pull/113) |
+| The explorer's socket server keeps reading new blocks while it fetches block details, so it no longer falls behind and gets disconnected during catch-up | 🔄 In review | — | [htn-socket-server#1](https://github.com/HoosatNetwork/htn-socket-server/pull/1) |
+| Open explorer pages rejoin live updates after a reconnect, so new blocks keep arriving without a page reload | 🔄 In review | — | [htn-explorer#12](https://github.com/HoosatNetwork/htn-explorer/pull/12) |
 
 ## Proposed, not yet sent
 
