@@ -7,7 +7,7 @@ after the first draft. **41 public findings: High 3, Medium 19, Low 13, Informat
 
 The *Status* of HTN-03 and HTN-43 records the outcome of an adversarial review of their draft PRs. Status last
 checked against GitHub on 2026-11-15 (see [CHANGES.md](CHANGES.md) for the daily count): HTND pull requests 34 released
-(v2.18.2, v2.18.3, v2.19.0), 8 merged, 4 in review, 1 closed; HTND issues 5 in review, 5 closed; bridge pull requests
+(v2.18.2, v2.18.3, v2.19.0), 8 merged, 4 in review, 1 closed; HTND issues 4 in review, 6 closed; bridge pull requests
 4 released (v1.9.0), 2 in review; htn-explorer and htn-socket-server pull requests 1 in review each; dnsseeder pull
 requests 2 merged.
 Headline numbers: an unpatched darwin/arm64 build rejects 101/183 real mainnet blocks
