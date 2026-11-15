@@ -94,7 +94,8 @@ and every change in detail: [CHANGES.md](CHANGES.md#by-release).
   [htn-explorer #12](https://github.com/HoosatNetwork/htn-explorer/pull/12)).
 - 🔀 / 🔄 **Smaller fixes:** the banning switch is merged; a script-builder fix
   ([#63](https://github.com/HoosatNetwork/HTND/pull/63)), a repair of a test that failed on Windows and macOS
-  ([#114](https://github.com/HoosatNetwork/HTND/pull/114)) and a proposal that a node already listening for RPC on its
+  ([#114](https://github.com/HoosatNetwork/HTND/pull/114)), a proposal to turn the full test suite back on in CI
+  with a routine any contributor can follow ([#115](https://github.com/HoosatNetwork/HTND/issues/115)) and a proposal that a node already listening for RPC on its
   own address and the default port still starts with the new RPC allow list
   ([#80](https://github.com/HoosatNetwork/HTND/issues/80)) are in review. Closed by us: an opt-in, node-wide limit on
   address-index RPC requests ([#99](https://github.com/HoosatNetwork/HTND/issues/99)); our measured wallet load did not justify the
