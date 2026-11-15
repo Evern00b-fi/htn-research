@@ -210,6 +210,7 @@ Totals on 15 November 2026: HTND pull requests 34 released, 8 merged, 4 in revie
 | Run more of the unit tests on every push, on every release architecture | 📝 Proposed | — | [HTN-19](findings/HTN-19.md), [HTN-24](findings/HTN-24.md), [HTN-25](findings/HTN-25.md), [HTN-34](findings/HTN-34.md) |
 | htnwallet pays at least the minimum relay fee for a transaction's size, so heavy ML-DSA multisig spends are not rejected by nodes | 🔀 Merged | 2.19.1 | [HTND#113](https://github.com/HoosatNetwork/HTND/pull/113) |
 | A wallet test that failed on Windows cleans up its temporary files after its helper process exits (test only) | 🔀 Merged | 2.19.1 | [HTND#108](https://github.com/HoosatNetwork/HTND/pull/108) |
+| The IBD-with-pruning integration test, which failed on Windows and macOS, waits until the syncing node serves its pruning point data before connecting (test only, plus a read-only accessor) | 🔄 In review | — | [HTND#114](https://github.com/HoosatNetwork/HTND/pull/114) |
 | The explorer's socket server keeps reading new blocks while it fetches block details, so it no longer falls behind and gets disconnected during catch-up | 🔄 In review | — | [htn-socket-server#1](https://github.com/HoosatNetwork/htn-socket-server/pull/1) |
 | Open explorer pages rejoin live updates after a reconnect, so new blocks keep arriving without a page reload | 🔄 In review | — | [htn-explorer#12](https://github.com/HoosatNetwork/htn-explorer/pull/12) |
 
