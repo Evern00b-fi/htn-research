@@ -100,7 +100,8 @@ and every change in detail: [CHANGES.md](CHANGES.md#by-release).
   ([#80](https://github.com/HoosatNetwork/HTND/issues/80)) are in review. Closed by us: an opt-in, node-wide limit on
   address-index RPC requests ([#99](https://github.com/HoosatNetwork/HTND/issues/99)); our measured wallet load did not justify the
   option, and the comparison pointed to how the UTXO buffer is sized as the relevant cost. The separately tested buffer
-  change (`0fa4041`) is a decision for the Hoosat developers.
+  change (`0fa4041`) was reverted from 2.19.1; the Hoosat developers then merged the same buffer sizing in
+  [#117](https://github.com/HoosatNetwork/HTND/pull/117).
 - 📝 Proposed — Keep evidence instead of deleting the database when it is found corrupt; a memory budget that
   follows the machine's RAM; a study of the GHOSTDAG K parameter; 30 items in all. See
   [CHANGES.md](CHANGES.md#proposed-not-yet-sent).
