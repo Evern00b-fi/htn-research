@@ -5,11 +5,8 @@ were revised after review, so ID order is not severity order. Details per findin
 Gaps in the numbering are items withdrawn before publication; their IDs are not reused. HTN-39 to HTN-44 were added
 after the first draft. **41 public findings: High 3, Medium 19, Low 13, Informational 6.**
 
-The *Status* of HTN-03 and HTN-43 records the outcome of an adversarial review of their draft PRs. Status last
-checked against GitHub on 2026-11-15 (see [CHANGES.md](CHANGES.md) for the daily count): HTND pull requests 34 released
-(v2.18.2, v2.18.3, v2.19.0), 8 merged, 4 in review, 1 closed; HTND issues 4 in review, 6 closed; bridge pull requests
-4 released (v1.9.0), 2 in review; htn-explorer and htn-socket-server pull requests 1 in review each; dnsseeder pull
-requests 2 merged.
+The *Status* of HTN-03 and HTN-43 records the outcome of an adversarial review of their draft PRs. Current upstream
+counts (pull requests and issues by state) are in the daily [CHANGES.md](CHANGES.md) totals.
 Headline numbers: an unpatched darwin/arm64 build rejects 101/183 real mainnet blocks
 (HTN-01); three unused caches hold 342.9 MB (HTN-08); at fixed topology K=18 changes the red share from 8.792 % to
 1.120 %, and on a limit-consistent prefix from 9.622 % to 0.590 % (HTN-04); a pruning-point move stopped block
@@ -90,7 +87,6 @@ and non-upgraded nodes fork off. No finding requires halting, rewinding or reorg
 | [HTN-42](findings/HTN-42.md) | Install script and sample systemd unit are stored with CRLF line endings; the script does not parse | Low | tooling | Reproduced | none | PR | Draft — not yet submitted | TBD |
 | [HTN-43](findings/HTN-43.md) | A damaged record in an older WAL forces a full resync; a point-in-time WAL cut could avoid it (research) | Low | storage | Reproduced | none | PR | Prototype — not ready (review: transient read errors cause extra loss 364→243 keys; missing durability barrier; depends on the pruning-flag fix) | TBD |
 | [HTN-44](findings/HTN-44.md) | Bridge: the template cache is no longer cleared on a new-block notification | Low | tooling | Measured | none | PR | Merged 2026-10-17 into 1.8.2 (6e4af6a5d) — released in bridge v1.9.0 (8 November 2026) | PR [bridge#9](https://github.com/HoosatNetwork/htn-stratum-bridge/pull/9) |
-| — | Security-related findings — not listed here. Reported privately to the maintainers; mechanics intentionally omitted; published only after a fix is released and disclosure is agreed. | — | — | — | none | private disclosure | Reported privately | — |
 
 ## Further submissions
 

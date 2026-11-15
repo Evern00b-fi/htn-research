@@ -96,9 +96,9 @@ and every change in detail: [CHANGES.md](CHANGES.md#by-release).
   ([#63](https://github.com/HoosatNetwork/HTND/pull/63)) and a proposal that a node already listening for RPC on its
   own address and the default port still starts with the new RPC allow list
   ([#80](https://github.com/HoosatNetwork/HTND/issues/80)) are in review. Closed by us: an opt-in, node-wide limit on
-  address-index RPC requests ([#99](https://github.com/HoosatNetwork/HTND/issues/99)); the measured cost came from how
-  the UTXO buffer is sized for reads without a result limit, so the limit is not needed; that buffer fix (`0fa4041`)
-  is a separate decision for the Hoosat developers.
+  address-index RPC requests ([#99](https://github.com/HoosatNetwork/HTND/issues/99)); our measured wallet load did not justify the
+  option, and the comparison pointed to how the UTXO buffer is sized as the relevant cost. The separately tested buffer
+  change (`0fa4041`) is a decision for the Hoosat developers.
 - 📝 Proposed — Keep evidence instead of deleting the database when it is found corrupt; a memory budget that
   follows the machine's RAM; a study of the GHOSTDAG K parameter; 30 items in all. See
   [CHANGES.md](CHANGES.md#proposed-not-yet-sent).

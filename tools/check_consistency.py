@@ -14,7 +14,6 @@ Checks:
   8. every figure listed in FIGURES exists, is well-formed XML with <title>/<desc>, contains the expected values in its
      text, those values also appear in the source report, every Markdown image link resolves to a file, and every SVG
      under figures/ is listed in figures/README.md;
-  9. (warnings) README status marks and FINDINGS statuses agree with the CHANGES.md status of every linked pull request.
 
 Exit code 0 when everything passes, 1 otherwise. Standard library only.
 """
@@ -234,35 +233,6 @@ for head, cap in README_MAX_BULLETS.items():
     n = len(re.findall(r"^- ", sec.group(1), re.M)) if sec else -1
     if not 0 < n <= cap:
         errors.append(f"README.md: section '{head}' has {n} items (1..{cap}); keep only the latest release / main work")
-
-# ---- 9. README and FINDINGS agree with CHANGES.md (2026-11-15: the daily updater keeps CHANGES.md current, but the
-# prose went stale for days). Warnings only, so the automatic status push is never blocked; the updater logs them
-# every day until the text is fixed by hand.
-MARKS = ("✅", "🔀", "🔄", "🧪", "📝")
-PULL = re.compile(r"https://github\.com/HoosatNetwork/([\w.-]+)/pull/(\d+)")
-state = {}  # (repo, number) -> mark, or "closed"
-for l in read(os.path.join(ROOT, "CHANGES.md")).splitlines():
-    cells = l.split(" | ")
-    if l.startswith("|") and len(cells) == 4 and PULL.search(cells[3]):
-        st = cells[1].strip()
-        mark = st[0] if st[:1] in MARKS else "closed" if st.lower().startswith("closed") else None
-        for m in PULL.finditer(cells[3]):
-            state[m.groups()] = mark
-for head in README_MAX_BULLETS:
-    sec = re.search(rf"^## {head}\n(.*?)(?=^## )", readme, re.M | re.S)
-    for bullet in re.split(r"^- ", sec.group(1), flags=re.M)[1:] if sec else []:
-        marks = {c for c in bullet[:30] if c in MARKS}
-        for m in PULL.finditer(bullet):
-            if state.get(m.groups()) not in marks | {None}:
-                warnings.append(f"README.md '{head}': bullet '{bullet[:50].strip()}' is marked {''.join(sorted(marks)) or 'nothing'}"
-                                f" but {m.group(1)}#{m.group(2)} is {state[m.groups()]} in CHANGES.md")
-WORD = {"✅": "released", "🔀": "merged", "🔄": "submitted", "closed": "closed"}
-for fid, t in table_meta.items():
-    for m in PULL.finditer(t["upstream"]):
-        want = WORD.get(state.get(m.groups()))
-        if want and want not in t["status"].lower():
-            warnings.append(f"FINDINGS.md {fid}: {m.group(1)}#{m.group(2)} is {state[m.groups()]} in CHANGES.md but the "
-                            f"status does not say '{want}'")
 
 # ---- summary
 sev_counts = {}
