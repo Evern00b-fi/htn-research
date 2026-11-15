@@ -124,7 +124,7 @@ Totals on 15 November 2026: HTND pull requests 34 released, 8 merged, 4 in revie
 | Proposal: an opt-in, node-wide limit on how many address-index RPC requests the node serves at once | Closed by us 2026-11-15 (not needed: the measured cost came from how the UTXO buffer is sized, which `0fa4041` fixes) | — | [HTND#99](https://github.com/HoosatNetwork/HTND/issues/99) |
 | The DNS seeder stops re-dialling addresses that never answer and keeps good nodes in its answers | 🔀 Merged | master | [dnsseeder#1](https://github.com/HoosatNetwork/dnsseeder/pull/1) |
 | The DNS seeder locks its address book while it counts addresses | 🔀 Merged | master | [dnsseeder#2](https://github.com/HoosatNetwork/dnsseeder/pull/2) |
-| Proposal: the new RPC allow list keeps an operator's own RPC listener, and wildcard listeners keep accepting both IPv4 and IPv6 as before | 🔄 In review | — | [HTND#80](https://github.com/HoosatNetwork/HTND/issues/80) |
+| Proposal: with the new RPC allow list, a node that already listens for RPC on its own address and the default port still starts (narrowed 2026-11-15; the IPv4/IPv6 point was withdrawn) | 🔄 In review | — | [HTND#80](https://github.com/HoosatNetwork/HTND/issues/80) |
 | A block whose parents arrive while it is being checked is processed instead of triggering a small re-sync | ✅ Released | v2.18.3 | [HTND#61](https://github.com/HoosatNetwork/HTND/pull/61) |
 | The GetBlocks call no longer lists one block twice in its answer | ✅ Released | v2.18.3 | [HTND#62](https://github.com/HoosatNetwork/HTND/pull/62) |
 | A peer's reject message is kept at no more than 2 KiB in the node's error and log | ✅ Released | v2.18.3 | [HTND#64](https://github.com/HoosatNetwork/HTND/pull/64) |
