@@ -17,7 +17,8 @@ developers can accept or reject on its own. The Hoosat developers decide what go
 ## What is better now
 
 The latest releases are **HTND v2.19.0** and **htn-stratum-bridge v1.9.0** (both 8 November 2026). Update your node
-and your bridge to get these changes.
+and your bridge to get these changes. Seven more HTND fixes are merged into the 2.19.1 branch and ship with the next
+HTND release; they are listed under the next heading.
 
 **Mining**
 
@@ -45,6 +46,16 @@ and every change in detail: [CHANGES.md](CHANGES.md#by-release).
 
 ## What we are working on
 
+- 🔀 Merged into 2.19.1 — **A node that keeps running.** A local error while a peer connects (for example a database
+  error) now disconnects that peer instead of stopping the whole node
+  ([#110](https://github.com/HoosatNetwork/HTND/pull/110)). A chain-changed notification that refers to blocks removed
+  after a sync is skipped with a warning instead of stopping the node
+  ([#111](https://github.com/HoosatNetwork/HTND/pull/111)).
+- 🔀 Merged into 2.19.1 — **Less memory and work per block.** The database releases each write batch right after it
+  is saved, so the memory is reused instead of waiting for garbage collection
+  ([#109](https://github.com/HoosatNetwork/HTND/pull/109)). The list of changed coins is prepared only when a client
+  has subscribed to it, so no work is spent on it after every block when nobody listens
+  ([#112](https://github.com/HoosatNetwork/HTND/pull/112)).
 - ✅ Released in v2.18.3, measurement next — **The pruning pause.** Every few hours each node stops processing blocks
   for minutes while it rebuilds its pruning data; on our nodes running v2.18.2 about 2–6 minutes per node. The check of
   the new data against its commitment, the longest part, now runs without stopping block processing
@@ -54,11 +65,13 @@ and every change in detail: [CHANGES.md](CHANGES.md#by-release).
   split into small steps that resume after a crash, and old history is deleted in the background
   ([#82](https://github.com/HoosatNetwork/HTND/pull/82), from [#42](https://github.com/HoosatNetwork/HTND/issues/42));
   its effect on the pause is not measured yet.
-- ✅ / 🔄 **Database care.** Four small changes, each after its own issue. Released in v2.18.3: a read error during a
-  walk over stored data is no longer silently treated as the end, and the node logs its storage health. In review: the
-  on-disk format cannot change by accident in a library update, and the database keeps within the open-file limit
-  ([#73](https://github.com/HoosatNetwork/HTND/pull/73)–[#76](https://github.com/HoosatNetwork/HTND/pull/76)).
-- 🔄 In review — **Clean shutdown, last part.** Six of eight small fixes are released in v2.18.3
+- ✅ / 🔄 **Database care.** Released in v2.18.3: a read error during a walk over stored data is no longer silently
+  treated as the end, and the node logs its storage health. In review: the on-disk format cannot change by accident in
+  a library update, and the database keeps within the open-file limit
+  ([#73](https://github.com/HoosatNetwork/HTND/pull/73), [#74](https://github.com/HoosatNetwork/HTND/pull/74)); and a
+  proposal that a node with a damaged database names the likely cause (a power cut, or faulty memory or disk) and stops
+  restarting in a loop ([#90](https://github.com/HoosatNetwork/HTND/issues/90)).
+- ✅ / 🔄 **Clean shutdown, last part.** Six of eight small fixes are released in v2.18.3
   ([#48](https://github.com/HoosatNetwork/HTND/pull/48)–[#53](https://github.com/HoosatNetwork/HTND/pull/53)). A stop
   request that ends the wait before an automatic update install is in review
   ([#54](https://github.com/HoosatNetwork/HTND/pull/54)); the stress test stays in our own testing.
@@ -66,11 +79,28 @@ and every change in detail: [CHANGES.md](CHANGES.md#by-release).
   for new-template notifications again after a node restart
   ([bridge #11](https://github.com/HoosatNetwork/htn-stratum-bridge/pull/11),
   [bridge #16](https://github.com/HoosatNetwork/htn-stratum-bridge/pull/16)).
-- 🔀 / 🔄 **Smaller fixes:** the banning switch is merged; a script-builder fix is in review. The other small fixes
-  (memory-limit default, storage errors, GetBlocks, reject messages, block announcements, tests) are released in
-  v2.18.3. Listed in [CHANGES.md](CHANGES.md).
+- 🔀 Merged into 2.19.1 — **Wallet and tests.** htnwallet pays at least the minimum relay fee for a transaction's size,
+  so heavy ML-DSA multisig spends are not rejected by nodes ([#113](https://github.com/HoosatNetwork/HTND/pull/113)).
+  A node started with the write-ahead log turned off (test mode) starts again
+  ([#107](https://github.com/HoosatNetwork/HTND/pull/107)), and a wallet test that failed on Windows cleans up its
+  temporary files ([#108](https://github.com/HoosatNetwork/HTND/pull/108)).
+- 🔀 Merged — **DNS seeder.** The seeder stops re-dialling addresses that never answer, keeps good nodes in its
+  answers, and locks its address book while it counts addresses
+  ([dnsseeder #1](https://github.com/HoosatNetwork/dnsseeder/pull/1),
+  [dnsseeder #2](https://github.com/HoosatNetwork/dnsseeder/pull/2)).
+- 🔄 In review — **Explorer.** The socket server keeps reading new blocks while it fetches block details, so it no
+  longer falls behind and gets disconnected during catch-up; open explorer pages rejoin live updates after a reconnect
+  ([htn-socket-server #1](https://github.com/HoosatNetwork/htn-socket-server/pull/1),
+  [htn-explorer #12](https://github.com/HoosatNetwork/htn-explorer/pull/12)).
+- 🔀 / 🔄 **Smaller fixes:** the banning switch is merged; a script-builder fix
+  ([#63](https://github.com/HoosatNetwork/HTND/pull/63)) and a proposal that a node already listening for RPC on its
+  own address and the default port still starts with the new RPC allow list
+  ([#80](https://github.com/HoosatNetwork/HTND/issues/80)) are in review. Closed by us: an opt-in, node-wide limit on
+  address-index RPC requests ([#99](https://github.com/HoosatNetwork/HTND/issues/99)); the measured cost came from how
+  the UTXO buffer is sized for reads without a result limit, so the limit is not needed; that buffer fix (`0fa4041`)
+  is a separate decision for the Hoosat developers.
 - 📝 Proposed — Keep evidence instead of deleting the database when it is found corrupt; a memory budget that
-  follows the machine's RAM; a study of the GHOSTDAG K parameter; and about 30 smaller items. See
+  follows the machine's RAM; a study of the GHOSTDAG K parameter; 30 items in all. See
   [CHANGES.md](CHANGES.md#proposed-not-yet-sent).
 
 ## How we test

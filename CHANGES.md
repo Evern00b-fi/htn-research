@@ -65,6 +65,7 @@ Totals on 15 November 2026: HTND pull requests 34 released, 8 merged, 4 in revie
 | When the database is found corrupt at start, keep diagnostics instead of silently deleting everything and re-syncing | 📝 Proposed | — | [HTN-03](findings/HTN-03.md), [HTN-43](findings/HTN-43.md) |
 | Proposal: when the database is damaged, the node names the likely cause (a power cut, or faulty memory or disk) and stops restarting in a loop on a damaged data file | 🔄 In review | — | [HTND#90](https://github.com/HoosatNetwork/HTND/issues/90) |
 | The database releases each write batch right after it is saved, so the memory is reused instead of waiting for garbage collection | 🔀 Merged | 2.19.1 | [HTND#109](https://github.com/HoosatNetwork/HTND/pull/109) |
+| A node started with the write-ahead log turned off (test mode) starts again, using the older direct update; it still refuses to start if unfinished journal work is on disk, and says to restart with the log on | 🔀 Merged | 2.19.1 | [HTND#107](https://github.com/HoosatNetwork/HTND/pull/107) |
 
 <details>
 <summary>Technical details: data safety</summary>
@@ -208,6 +209,7 @@ Totals on 15 November 2026: HTND pull requests 34 released, 8 merged, 4 in revie
 | Opt-in shutdown stress harness (see area 1) | Closed by us 2026-11-07 (test only; we keep running it in our own testing) | — | [HTND#55](https://github.com/HoosatNetwork/HTND/pull/55) |
 | Run more of the unit tests on every push, on every release architecture | 📝 Proposed | — | [HTN-19](findings/HTN-19.md), [HTN-24](findings/HTN-24.md), [HTN-25](findings/HTN-25.md), [HTN-34](findings/HTN-34.md) |
 | htnwallet pays at least the minimum relay fee for a transaction's size, so heavy ML-DSA multisig spends are not rejected by nodes | 🔀 Merged | 2.19.1 | [HTND#113](https://github.com/HoosatNetwork/HTND/pull/113) |
+| A wallet test that failed on Windows cleans up its temporary files after its helper process exits (test only) | 🔀 Merged | 2.19.1 | [HTND#108](https://github.com/HoosatNetwork/HTND/pull/108) |
 | The explorer's socket server keeps reading new blocks while it fetches block details, so it no longer falls behind and gets disconnected during catch-up | 🔄 In review | — | [htn-socket-server#1](https://github.com/HoosatNetwork/htn-socket-server/pull/1) |
 | Open explorer pages rejoin live updates after a reconnect, so new blocks keep arriving without a page reload | 🔄 In review | — | [htn-explorer#12](https://github.com/HoosatNetwork/htn-explorer/pull/12) |
 
