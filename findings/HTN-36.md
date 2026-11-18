@@ -8,7 +8,8 @@
 
 The README says the node "utilizes the DAGKnight protocol". For block version >= 6, K equals the number of direct
 parents (rank over an antichain = |parents|, verified on 1806 parent sets); chain selection remains GHOSTDAG by blue
-work, and `OrderDAG` only orders pending tips locally. `dagknight-faithfulness.md` is an AI-generated assessment that
+work. `OrderDAG` is no longer called: since v2.18.3, pending tips are resolved in GHOSTDAG order (blue work, hash
+tie-break), as in Kaspa. `dagknight-faithfulness.md` is an AI-generated assessment that
 describes caches no longer present.
 
 ## Affected code
