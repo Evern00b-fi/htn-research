@@ -138,6 +138,10 @@ HTND#77 and HTND#82 belong to HTN-40; both are listed in the table above).
 | [HTND#120](https://github.com/HoosatNetwork/HTND/pull/120) | htnwallet: stop rescanning every used address on every sync | Merged 2026-11-19 into 2.19.2 (81a7d368a) — not yet released |
 | [HTND#121](https://github.com/HoosatNetwork/HTND/pull/121) | htnwallet: one forced sync for a burst of broadcasts | Merged 2026-11-19 into 2.19.2 (454e9a459) — not yet released |
 | [bridge#16](https://github.com/HoosatNetwork/htn-stratum-bridge/pull/16) | Register for new-template notifications again after the node restarts | Submitted 2026-11-02 — open |
+| [dnsseeder#1](https://github.com/HoosatNetwork/dnsseeder/pull/1) | DNS seeder: stop re-dialling addresses that never answer and keep good nodes in the answers | Merged 2026-11-14 into master (9b427123f) |
+| [dnsseeder#2](https://github.com/HoosatNetwork/dnsseeder/pull/2) | DNS seeder: lock the address book while counting addresses | Merged 2026-11-14 into master (0bf98df25) |
+| [htn-socket-server#1](https://github.com/HoosatNetwork/htn-socket-server/pull/1) | Explorer socket server: keep reading new blocks while block details are fetched | Submitted 2026-11-14 — open |
+| [htn-explorer#12](https://github.com/HoosatNetwork/htn-explorer/pull/12) | Explorer: rejoin live updates after a reconnect | Submitted 2026-11-14 — open |
 
 ## Not included (not yet decision-ready)
 
