@@ -98,7 +98,7 @@ stopping a busy node, a safe pruning clean-up, 342.9 MB less memory per node) an
   longer falls behind and gets disconnected during catch-up; open explorer pages rejoin live updates after a reconnect
   ([htn-socket-server #1](https://github.com/HoosatNetwork/htn-socket-server/pull/1),
   [htn-explorer #12](https://github.com/HoosatNetwork/htn-explorer/pull/12)).
-- 🔀 / 🔄 **Smaller fixes:** the banning switch is merged; a script-builder fix
+- 🔄 **Smaller fixes:** a script-builder fix
   ([#63](https://github.com/HoosatNetwork/HTND/pull/63)), a proposal to turn the full test suite back on in CI
   with a routine any contributor can follow ([#115](https://github.com/HoosatNetwork/HTND/issues/115)) and a proposal that a node already listening for RPC on its
   own address and the default port still starts with the new RPC allow list
