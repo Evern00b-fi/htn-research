@@ -16,9 +16,9 @@ developers can accept or reject on its own. The Hoosat developers decide what go
 
 ## What is better now
 
-The latest releases are **HTND v2.19.0** and **htn-stratum-bridge v1.9.0** (both 8 November 2026). Update your node
-and your bridge to get these changes. Seven more HTND fixes are merged into the 2.19.1 branch and ship with the next
-HTND release; they are listed under the next heading.
+The latest releases are **HTND v2.19.1** (17 November 2026) and **htn-stratum-bridge v1.9.0** (8 November 2026).
+Update your node and your bridge to get these changes. Two more wallet fixes are merged into the 2.19.2 branch and ship
+with the next HTND release; they are listed under the next heading.
 
 **Mining**
 
@@ -31,31 +31,42 @@ HTND release; they are listed under the next heading.
 - ✅ Released in v2.19.0 — After the node restarts, a connected mining bridge (or any other program using the node's
   RPC) is signed up for its notifications again automatically, so miners keep getting new jobs.
 
+**Wallet**
+
+- ✅ Released in v2.19.1 — htnwallet pays at least the minimum relay fee for a transaction's size, so heavy ML-DSA
+  multisig spends are not rejected by nodes ([#113](https://github.com/HoosatNetwork/HTND/pull/113)).
+
 **Running a node**
 
-- ✅ Released in v2.19.0 — The node logs the memory limit and garbage-collector setting it actually runs with, in the
-  log file as well as on screen.
-- ✅ Released in v2.19.0 — Once the ML-DSA signature upgrade is active, the mempool also counts ML-DSA signature
-  checks toward its standardness limit for P2SH inputs, as it already does for the older signature checks.
-- ✅ Released in v2.18.3 — Coming from v2.18.2, v2.18.3 and v2.19.0 together also bring a shorter pruning pause, no
-  needless mini re-syncs, cleaner shutdowns, the same proof-of-work result on every CPU, a storage health summary in
-  the log and smaller fixes.
-
-Earlier releases (v2.18.2: no crash when stopping a busy node, a safe pruning clean-up, 342.9 MB less memory per node)
-and every change in detail: [CHANGES.md](CHANGES.md#by-release).
-
-## What we are working on
-
-- 🔀 Merged into 2.19.1 — **A node that keeps running.** A local error while a peer connects (for example a database
+- ✅ Released in v2.19.1 — **A node that keeps running.** A local error while a peer connects (for example a database
   error) now disconnects that peer instead of stopping the whole node
   ([#110](https://github.com/HoosatNetwork/HTND/pull/110)). A chain-changed notification that refers to blocks removed
   after a sync is skipped with a warning instead of stopping the node
   ([#111](https://github.com/HoosatNetwork/HTND/pull/111)).
-- 🔀 Merged into 2.19.1 — **Less memory and work per block.** The database releases each write batch right after it
+- ✅ Released in v2.19.1 — **Less memory and work per block.** The database releases each write batch right after it
   is saved, so the memory is reused instead of waiting for garbage collection
   ([#109](https://github.com/HoosatNetwork/HTND/pull/109)). The list of changed coins is prepared only when a client
   has subscribed to it, so no work is spent on it after every block when nobody listens
   ([#112](https://github.com/HoosatNetwork/HTND/pull/112)).
+- ✅ Released in v2.19.1 — A node started with the write-ahead log turned off (test mode) starts again
+  ([#107](https://github.com/HoosatNetwork/HTND/pull/107)), and two tests that failed on Windows or macOS pass again
+  ([#108](https://github.com/HoosatNetwork/HTND/pull/108), [#114](https://github.com/HoosatNetwork/HTND/pull/114)).
+- ✅ Released in v2.19.0 — The node logs the memory limit and garbage-collector setting it actually runs with, in the
+  log file as well as on screen.
+- ✅ Released in v2.19.0 — Once the ML-DSA signature upgrade is active, the mempool also counts ML-DSA signature
+  checks toward its standardness limit for P2SH inputs, as it already does for the older signature checks.
+
+Earlier releases (v2.18.3: a shorter pruning pause, no needless mini re-syncs, cleaner shutdowns, the same
+proof-of-work result on every CPU, a storage health summary in the log and smaller fixes; v2.18.2: no crash when
+stopping a busy node, a safe pruning clean-up, 342.9 MB less memory per node) and every change in detail:
+[CHANGES.md](CHANGES.md#by-release).
+
+## What we are working on
+
+- 🔀 Merged into 2.19.2 — **Lighter wallet syncing.** The wallet daemon no longer asks its node about every used
+  address every 2 seconds: after the first full scan it checks the addresses near the last used ones on every sync and
+  the older ones a batch at a time ([#120](https://github.com/HoosatNetwork/HTND/pull/120)). A burst of sends now
+  leads to one extra sync instead of one per send ([#121](https://github.com/HoosatNetwork/HTND/pull/121)).
 - ✅ Released in v2.18.3, measurement next — **The pruning pause.** Every few hours each node stops processing blocks
   for minutes while it rebuilds its pruning data; on our nodes running v2.18.2 about 2–6 minutes per node. The check of
   the new data against its commitment, the longest part, now runs without stopping block processing
@@ -79,11 +90,6 @@ and every change in detail: [CHANGES.md](CHANGES.md#by-release).
   for new-template notifications again after a node restart
   ([bridge #11](https://github.com/HoosatNetwork/htn-stratum-bridge/pull/11),
   [bridge #16](https://github.com/HoosatNetwork/htn-stratum-bridge/pull/16)).
-- 🔀 Merged into 2.19.1 — **Wallet and tests.** htnwallet pays at least the minimum relay fee for a transaction's size,
-  so heavy ML-DSA multisig spends are not rejected by nodes ([#113](https://github.com/HoosatNetwork/HTND/pull/113)).
-  A node started with the write-ahead log turned off (test mode) starts again
-  ([#107](https://github.com/HoosatNetwork/HTND/pull/107)), and a wallet test that failed on Windows cleans up its
-  temporary files ([#108](https://github.com/HoosatNetwork/HTND/pull/108)).
 - 🔀 Merged — **DNS seeder.** The seeder stops re-dialling addresses that never answer, keeps good nodes in its
   answers, and locks its address book while it counts addresses
   ([dnsseeder #1](https://github.com/HoosatNetwork/dnsseeder/pull/1),
@@ -93,8 +99,7 @@ and every change in detail: [CHANGES.md](CHANGES.md#by-release).
   ([htn-socket-server #1](https://github.com/HoosatNetwork/htn-socket-server/pull/1),
   [htn-explorer #12](https://github.com/HoosatNetwork/htn-explorer/pull/12)).
 - 🔀 / 🔄 **Smaller fixes:** the banning switch is merged; a script-builder fix
-  ([#63](https://github.com/HoosatNetwork/HTND/pull/63)), a repair of a test that failed on Windows and macOS
-  ([#114](https://github.com/HoosatNetwork/HTND/pull/114)), a proposal to turn the full test suite back on in CI
+  ([#63](https://github.com/HoosatNetwork/HTND/pull/63)), a proposal to turn the full test suite back on in CI
   with a routine any contributor can follow ([#115](https://github.com/HoosatNetwork/HTND/issues/115)) and a proposal that a node already listening for RPC on its
   own address and the default port still starts with the new RPC allow list
   ([#80](https://github.com/HoosatNetwork/HTND/issues/80)) are in review. Closed by us: an opt-in, node-wide limit on
