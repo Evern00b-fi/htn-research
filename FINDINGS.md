@@ -90,8 +90,8 @@ and non-upgraded nodes fork off. No finding requires halting, rewinding or reorg
 
 ## Further submissions
 
-Small fixes prepared after the findings table was fixed in scope; they are not separate findings (HTND#52 is HTN-35
-and is listed in the table above).
+Small fixes prepared after the findings table was fixed in scope; they are not separate findings (HTND#52 is HTN-35,
+HTND#77 and HTND#82 belong to HTN-40; both are listed in the table above).
 
 | Pull request | Change | Status |
 |---|---|---|
@@ -122,6 +122,22 @@ and is listed in the table above).
 | [HTND#74](https://github.com/HoosatNetwork/HTND/pull/74) | Budget Pebble's file cache against the process open-file limit (issue #71) | Submitted 2026-10-18 — open |
 | [HTND#75](https://github.com/HoosatNetwork/HTND/pull/75) | Log effective Pebble options and compact storage metrics (issue #72) | Released in v2.18.3 (1 November 2026) |
 | [HTND#76](https://github.com/HoosatNetwork/HTND/pull/76) | LevelDB cursor: return the iterator's error on Close (issue #69) | Merged 2026-10-18 into 2.18.3 (6d1f857b0) — released in v2.18.3 (1 November 2026) |
+| [HTND#81](https://github.com/HoosatNetwork/HTND/pull/81) | Test: order the pruning-point scan cancellation before the cursor is released (failed on single-CPU or busy machines) | Merged 2026-10-19 into 2.18.3 (1064e0f54) — released in v2.18.3 (1 November 2026) |
+| [HTND#86](https://github.com/HoosatNetwork/HTND/pull/86) | Clear the two lint findings from HTND#82 and bring the unit tests in line with the 2.18.3 changes | Merged 2026-10-30 into 2.18.3 (26b676f62) — released in v2.18.3 (1 November 2026) |
+| [HTND#91](https://github.com/HoosatNetwork/HTND/pull/91) | RPC client: register for notifications again after reconnecting to the node | Merged 2026-11-02 into 2.18.4 (b52f4fe8e) — released in v2.19.0 (8 November 2026) |
+| [HTND#100](https://github.com/HoosatNetwork/HTND/pull/100) | Mempool: count ML-DSA signature checks in P2SH standardness once ML-DSA is active | Merged 2026-11-08 into 2.18.4 (e2f793550) — released in v2.19.0 (8 November 2026) |
+| [HTND#101](https://github.com/HoosatNetwork/HTND/pull/101) | Log the effective memory settings, also to the log file | Merged 2026-11-08 into 2.18.4 (9e40de4aa) — released in v2.19.0 (8 November 2026) |
+| [HTND#107](https://github.com/HoosatNetwork/HTND/pull/107) | Start without the pruning journal when the write-ahead log is off (test mode) | Merged 2026-11-13 into 2.19.1 (8f7d2a4c7) — released in v2.19.1 (17 November 2026) |
+| [HTND#108](https://github.com/HoosatNetwork/HTND/pull/108) | Test: let the wallet Start error test clean up on Windows | Merged 2026-11-13 into 2.19.1 (7af14a2ff) — released in v2.19.1 (17 November 2026) |
+| [HTND#109](https://github.com/HoosatNetwork/HTND/pull/109) | Pebble: release the write batch right after it is committed | Merged 2026-11-14 into 2.19.1 (f547f1896) — released in v2.19.1 (17 November 2026) |
+| [HTND#110](https://github.com/HoosatNetwork/HTND/pull/110) | Disconnect the peer on a local handshake error instead of stopping the node | Merged 2026-11-14 into 2.19.1 (643e384c6) — released in v2.19.1 (17 November 2026) |
+| [HTND#111](https://github.com/HoosatNetwork/HTND/pull/111) | RPC: skip a chain-changed notification whose blocks are gone instead of stopping the node | Merged 2026-11-14 into 2.19.1 (7c637bef7) — released in v2.19.1 (17 November 2026) |
+| [HTND#112](https://github.com/HoosatNetwork/HTND/pull/112) | UTXO index: build the list of changed coins only when a client has subscribed | Merged 2026-11-14 into 2.19.1 (f16ba4817) — released in v2.19.1 (17 November 2026) |
+| [HTND#113](https://github.com/HoosatNetwork/HTND/pull/113) | htnwallet: pay at least the minimum relay fee for the signed transaction's size | Merged 2026-11-14 into 2.19.1 (3afe24fb2) — released in v2.19.1 (17 November 2026) |
+| [HTND#114](https://github.com/HoosatNetwork/HTND/pull/114) | Test: `TestIBDWithPruning` waits until the pruning point UTXO set is served (failed on Windows and macOS) | Merged 2026-11-15 into 2.19.1 (3e997861d) — released in v2.19.1 (17 November 2026) |
+| [HTND#120](https://github.com/HoosatNetwork/HTND/pull/120) | htnwallet: stop rescanning every used address on every sync | Merged 2026-11-19 into 2.19.2 (81a7d368a) — not yet released |
+| [HTND#121](https://github.com/HoosatNetwork/HTND/pull/121) | htnwallet: one forced sync for a burst of broadcasts | Merged 2026-11-19 into 2.19.2 (454e9a459) — not yet released |
+| [bridge#16](https://github.com/HoosatNetwork/htn-stratum-bridge/pull/16) | Register for new-template notifications again after the node restarts | Submitted 2026-11-02 — open |
 
 ## Not included (not yet decision-ready)
 
