@@ -178,6 +178,8 @@ Totals on 20 November 2026: HTND pull requests 43 released, 2 merged, 4 in revie
 | Bridge: stratum lines that arrive in pieces are reassembled correctly, with a fixed line limit | 🔄 In review | — | [bridge#11](https://github.com/HoosatNetwork/htn-stratum-bridge/pull/11) |
 | Bridge: a header-serialization test is checked against the node's own hash (the test had a stale expected value) | ✅ Released | v1.9.0 | [bridge#13](https://github.com/HoosatNetwork/htn-stratum-bridge/pull/13) |
 | Bridge: after the node restarts, the bridge registers again for new-template notifications, so miners keep getting fresh jobs | 🔄 In review | — | [bridge#16](https://github.com/HoosatNetwork/htn-stratum-bridge/pull/16) |
+| Bridge: a login with the address followed by a worker name after another separator (for example a comma) keeps the full address | 🔄 In review | — | [bridge#19](https://github.com/HoosatNetwork/htn-stratum-bridge/pull/19) |
+| Bridge: a miner with an invalid wallet address gets an error reply instead of a silently closed connection | 🔄 In review | — | [bridge#20](https://github.com/HoosatNetwork/htn-stratum-bridge/pull/20) |
 | Node: after the node restarts, programs connected over RPC (such as a mining bridge) register for their notifications again automatically, so new block templates keep arriving | ✅ Released | v2.19.0 | [HTND#91](https://github.com/HoosatNetwork/HTND/pull/91) |
 
 <details>

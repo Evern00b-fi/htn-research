@@ -87,9 +87,12 @@ stopping a busy node, a safe pruning clean-up, 342.9 MB less memory per node) an
   request that ends the wait before an automatic update install is in review
   ([#54](https://github.com/HoosatNetwork/HTND/pull/54)); the stress test stays in our own testing.
 - 🔄 In review — **Mining bridge.** Sturdier handling of stratum lines that arrive in pieces, and the bridge signing up
-  for new-template notifications again after a node restart
+  for new-template notifications again after a node restart, a full address kept when a worker name follows another
+  separator, and an error reply for an invalid wallet address
   ([bridge #11](https://github.com/HoosatNetwork/htn-stratum-bridge/pull/11),
-  [bridge #16](https://github.com/HoosatNetwork/htn-stratum-bridge/pull/16)).
+  [bridge #16](https://github.com/HoosatNetwork/htn-stratum-bridge/pull/16),
+  [bridge #19](https://github.com/HoosatNetwork/htn-stratum-bridge/pull/19),
+  [bridge #20](https://github.com/HoosatNetwork/htn-stratum-bridge/pull/20)).
 - 🔀 Merged — **DNS seeder.** The seeder stops re-dialling addresses that never answer, keeps good nodes in its
   answers, and locks its address book while it counts addresses
   ([dnsseeder #1](https://github.com/HoosatNetwork/dnsseeder/pull/1),
