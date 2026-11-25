@@ -1,6 +1,6 @@
 # Changes by area
 
-Every change we have sent to the Hoosat developers. Status checked against GitHub on 22 November 2026.
+Every change we have sent to the Hoosat developers. Status checked against GitHub on 25 November 2026.
 
 | Mark | Meaning |
 |---|---|
@@ -10,7 +10,7 @@ Every change we have sent to the Hoosat developers. Status checked against GitHu
 | 🧪 Being tested | Fix written; being measured before it is sent |
 | 📝 Proposed | Written up here; not yet sent |
 
-Totals on 22 November 2026: HTND pull requests 43 released, 2 merged, 4 in review, 1 closed; HTND issues 5 in review, 6 closed; bridge pull requests 4 released, 4 in review; htn-explorer pull requests 1 in review; htn-socket-server pull requests 1 in review; dnsseeder pull requests 2 merged.
+Totals on 25 November 2026: HTND pull requests 43 released, 2 merged, 4 in review, 1 closed; HTND issues 5 in review, 6 closed; bridge pull requests 4 released, 4 in review; htn-explorer pull requests 1 merged, 1 in review; htn-socket-server pull requests 1 in review; dnsseeder pull requests 2 merged.
 
 ## By release
 
@@ -218,7 +218,7 @@ Totals on 22 November 2026: HTND pull requests 43 released, 2 merged, 4 in revie
 | A burst of sends or broadcasts makes the wallet daemon sync once more, not once per request | 🔀 Merged | 2.19.2 | [HTND#121](https://github.com/HoosatNetwork/HTND/pull/121) |
 | Proposal: turn the full test suite back on for pull requests in small steps, add a separate run of the long tests, keep the Go version and CI actions current, and a routine any contributor can follow when a test fails | 🔄 In review | — | [HTND#115](https://github.com/HoosatNetwork/HTND/issues/115) |
 | The explorer's socket server keeps reading new blocks while it fetches block details, so it no longer falls behind and gets disconnected during catch-up | 🔄 In review | — | [htn-socket-server#1](https://github.com/HoosatNetwork/htn-socket-server/pull/1) |
-| Open explorer pages rejoin live updates after a reconnect, so new blocks keep arriving without a page reload | 🔄 In review | — | [htn-explorer#12](https://github.com/HoosatNetwork/htn-explorer/pull/12) |
+| Open explorer pages rejoin live updates after a reconnect, so new blocks keep arriving without a page reload | 🔀 Merged | main | [htn-explorer#12](https://github.com/HoosatNetwork/htn-explorer/pull/12) |
 
 ## Proposed, not yet sent
 
