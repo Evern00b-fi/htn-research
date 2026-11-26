@@ -143,7 +143,8 @@ HTND#77 and HTND#82 belong to HTN-40; both are listed in the table above).
 | [dnsseeder#1](https://github.com/HoosatNetwork/dnsseeder/pull/1) | DNS seeder: stop re-dialling addresses that never answer and keep good nodes in the answers | Merged 2026-11-14 into master (9b427123f) |
 | [dnsseeder#2](https://github.com/HoosatNetwork/dnsseeder/pull/2) | DNS seeder: lock the address book while counting addresses | Merged 2026-11-14 into master (0bf98df25) |
 | [htn-socket-server#1](https://github.com/HoosatNetwork/htn-socket-server/pull/1) | Explorer socket server: keep reading new blocks while block details are fetched | Submitted 2026-11-14 — open |
-| [htn-explorer#12](https://github.com/HoosatNetwork/htn-explorer/pull/12) | Explorer: rejoin live updates after a reconnect | Submitted 2026-11-14 — open |
+| [htn-explorer#12](https://github.com/HoosatNetwork/htn-explorer/pull/12) | Explorer: rejoin live updates after a reconnect | Merged 2026-11-24 into main (951dbd99d) |
+| [htn-explorer#13](https://github.com/HoosatNetwork/htn-explorer/pull/13) | Explorer: keep the shown blocks when the last-blocks reply arrives again | Merged 2026-11-25 into main (05fa19eee) |
 
 ## Not included (not yet decision-ready)
 

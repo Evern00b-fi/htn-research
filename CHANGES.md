@@ -219,6 +219,7 @@ Totals on 26 November 2026: HTND pull requests 43 released, 2 merged, 4 in revie
 | Proposal: turn the full test suite back on for pull requests in small steps, add a separate run of the long tests, keep the Go version and CI actions current, and a routine any contributor can follow when a test fails | 🔄 In review | — | [HTND#115](https://github.com/HoosatNetwork/HTND/issues/115) |
 | The explorer's socket server keeps reading new blocks while it fetches block details, so it no longer falls behind and gets disconnected during catch-up | 🔄 In review | — | [htn-socket-server#1](https://github.com/HoosatNetwork/htn-socket-server/pull/1) |
 | Open explorer pages rejoin live updates after a reconnect, so new blocks keep arriving without a page reload | 🔀 Merged | main | [htn-explorer#12](https://github.com/HoosatNetwork/htn-explorer/pull/12) |
+| After a reconnect, open explorer pages keep the blocks they already show instead of dropping back to the socket server's last 10 | 🔀 Merged | main | [htn-explorer#13](https://github.com/HoosatNetwork/htn-explorer/pull/13) |
 
 ## Proposed, not yet sent
 

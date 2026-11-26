@@ -97,10 +97,11 @@ stopping a busy node, a safe pruning clean-up, 342.9 MB less memory per node) an
   answers, and locks its address book while it counts addresses
   ([dnsseeder #1](https://github.com/HoosatNetwork/dnsseeder/pull/1),
   [dnsseeder #2](https://github.com/HoosatNetwork/dnsseeder/pull/2)).
-- 🔄 In review — **Explorer.** The socket server keeps reading new blocks while it fetches block details, so it no
-  longer falls behind and gets disconnected during catch-up; open explorer pages rejoin live updates after a reconnect
-  ([htn-socket-server #1](https://github.com/HoosatNetwork/htn-socket-server/pull/1),
-  [htn-explorer #12](https://github.com/HoosatNetwork/htn-explorer/pull/12)).
+- 🔀 / 🔄 **Explorer.** Merged: open explorer pages rejoin live updates after a reconnect and keep the blocks they
+  already show ([htn-explorer #12](https://github.com/HoosatNetwork/htn-explorer/pull/12),
+  [htn-explorer #13](https://github.com/HoosatNetwork/htn-explorer/pull/13)). In review: the socket server keeps
+  reading new blocks while it fetches block details, so it no longer falls behind and gets disconnected during
+  catch-up ([htn-socket-server #1](https://github.com/HoosatNetwork/htn-socket-server/pull/1)).
 - 🔄 **Smaller fixes:** a script-builder fix
   ([#63](https://github.com/HoosatNetwork/HTND/pull/63)), a proposal to turn the full test suite back on in CI
   with a routine any contributor can follow ([#115](https://github.com/HoosatNetwork/HTND/issues/115)) and a proposal that a node already listening for RPC on its
