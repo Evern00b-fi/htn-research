@@ -137,6 +137,11 @@ HTND#77 and HTND#82 belong to HTN-40; both are listed in the table above).
 | [HTND#114](https://github.com/HoosatNetwork/HTND/pull/114) | Test: `TestIBDWithPruning` waits until the pruning point UTXO set is served (failed on Windows and macOS) | Merged 2026-11-15 into 2.19.1 (3e997861d) — released in v2.19.1 (17 November 2026) |
 | [HTND#120](https://github.com/HoosatNetwork/HTND/pull/120) | htnwallet: stop rescanning every used address on every sync | Merged 2026-11-19 into 2.19.2 (81a7d368a) — not yet released |
 | [HTND#121](https://github.com/HoosatNetwork/HTND/pull/121) | htnwallet: one forced sync for a burst of broadcasts | Merged 2026-11-19 into 2.19.2 (454e9a459) — not yet released |
+| [HTND#122](https://github.com/HoosatNetwork/HTND/pull/122) | htnwallet: recover address allocation from an impossible last used index | Submitted 2026-11-26 — open |
+| [HTND#123](https://github.com/HoosatNetwork/HTND/pull/123) | htnwallet: apply the ML-DSA-44 activation rule to ShowAddresses | Submitted 2026-11-26 — open |
+| [HTND#124](https://github.com/HoosatNetwork/HTND/pull/124) | htnwallet: keep ML-DSA-44 coins received before activation out of sends | Submitted 2026-11-26 — open |
+| [HTND#125](https://github.com/HoosatNetwork/HTND/pull/125) | htnwallet: reserve a change index only when a send leaves the daemon | Submitted 2026-11-26 — open |
+| [HTND#126](https://github.com/HoosatNetwork/HTND/pull/126) | htnwallet: poll the recent address batches once per node cache time | Submitted 2026-11-26 — open |
 | [bridge#16](https://github.com/HoosatNetwork/htn-stratum-bridge/pull/16) | Register for new-template notifications again after the node restarts | Submitted 2026-11-02 — open |
 | [bridge#19](https://github.com/HoosatNetwork/htn-stratum-bridge/pull/19) | Keep the address when a worker name follows another separator | Submitted 2026-11-21 — open |
 | [bridge#20](https://github.com/HoosatNetwork/htn-stratum-bridge/pull/20) | Answer an invalid wallet with a JSON-RPC error before closing | Submitted 2026-11-21 — open |
