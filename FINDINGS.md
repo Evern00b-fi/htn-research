@@ -142,6 +142,10 @@ HTND#77 and HTND#82 belong to HTN-40; both are listed in the table above).
 | [HTND#124](https://github.com/HoosatNetwork/HTND/pull/124) | htnwallet: keep ML-DSA-44 coins received before activation out of sends | Submitted 2026-11-26 — open |
 | [HTND#125](https://github.com/HoosatNetwork/HTND/pull/125) | htnwallet: reserve a change index only when a send leaves the daemon | Submitted 2026-11-26 — open |
 | [HTND#126](https://github.com/HoosatNetwork/HTND/pull/126) | htnwallet: poll the recent address batches once per node cache time | Submitted 2026-11-26 — open |
+| [HTND#127](https://github.com/HoosatNetwork/HTND/pull/127) | htnwallet: keep the change of a mixed ML-DSA-44 send in ML-DSA-44 | Submitted 2026-11-26 — open |
+| [HTND#128](https://github.com/HoosatNetwork/HTND/pull/128) | htnwallet: keep implicit compounds from downgrading ML-DSA-44 coins | Submitted 2026-11-26 — open |
+| [HTND#129](https://github.com/HoosatNetwork/HTND/pull/129) | htnwallet: report ML-DSA-44 scan gaps | Submitted 2026-11-26 — open |
+| [HTND#130](https://github.com/HoosatNetwork/HTND/pull/130) | htnwallet: generate ML-DSA-44 keys past the indexes in use | Submitted 2026-11-26 — open |
 | [bridge#16](https://github.com/HoosatNetwork/htn-stratum-bridge/pull/16) | Register for new-template notifications again after the node restarts | Submitted 2026-11-02 — open |
 | [bridge#19](https://github.com/HoosatNetwork/htn-stratum-bridge/pull/19) | Keep the address when a worker name follows another separator | Submitted 2026-11-21 — open |
 | [bridge#20](https://github.com/HoosatNetwork/htn-stratum-bridge/pull/20) | Answer an invalid wallet with a JSON-RPC error before closing | Submitted 2026-11-21 — open |

@@ -68,7 +68,7 @@ stopping a busy node, a safe pruning clean-up, 342.9 MB less memory per node) an
   batches ([#120](https://github.com/HoosatNetwork/HTND/pull/120)). A burst of sends now
   leads to one extra sync instead of one per send ([#121](https://github.com/HoosatNetwork/HTND/pull/121)).
 - 🔄 In review — **Wallet fixes for ML-DSA-44 activation** and three smaller wallet fixes
-  ([#122](https://github.com/HoosatNetwork/HTND/pull/122)–[#126](https://github.com/HoosatNetwork/HTND/pull/126);
+  ([#122](https://github.com/HoosatNetwork/HTND/pull/122)–[#130](https://github.com/HoosatNetwork/HTND/pull/130);
   details in [CHANGES.md](CHANGES.md)).
 - ✅ Released in v2.18.3, measurement next — **The pruning pause.** Every few hours each node stops processing blocks
   for minutes while it rebuilds its pruning data; on our nodes running v2.18.2 about 2–6 minutes per node. The check of
